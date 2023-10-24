@@ -1,0 +1,94 @@
+/**{
+    color: #CBE6F9; 
+    color: #F5C8DA; 
+    color: #4F260A;
+}*/
+
+/*Inicio Header styles*/
+.head{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    background-color: #F5C8DA;
+}
+
+.MenuList{
+    list-style: none;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.ItemMenu{
+    margin: 0 2rem;
+}
+
+.MenuText{
+    font-size: 22px;
+    font-weight: 700;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Mountains of Christmas', serif;
+    color: #4F260A;
+}
+
+.MenuLink{
+    font-size: 16px;
+    font-weight: 600;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    color: #4F260A;
+}
+
+a:hover{
+    color: #FF69A4;
+    font-weight: bold;
+    opacity: 70%;
+}
+
+/*Fin Header styles*/
+
+/*Body Styles*/
+h3{
+    padding-top: 3rem;
+    text-align:center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.text{
+    font-size: 1rem;
+}
+.text2{
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    color: #4F260A;
+}
+
+/*Fin Footer styles*/
+.footer{ 
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    height: 4rem;
+    text-align:  center;
+    background-color: #F5C8DA;
+}
+
+.FooterText{
+    font-size: 24px;
+    font-weight: 700;
+    list-style: none;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-family: 'Mountains of Christmas', serif;
+    color: #4F260A;
+}
+/*Fin Footer styles*/
