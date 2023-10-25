@@ -83,3 +83,7 @@ ENGINE = InnoDB;
 ALTER TABLE ingredientes
 ADD FOREIGN KEY (id_proveedor) REFERENCES proveedores(id_proveedor);
 
+INSERT INTO `sweetseasons`.`categoria` (`id_categoria`, `Nombre`, `Descripcion`) VALUES ('1', 'Pasteleria', 'Productos de pasteleria');
+INSERT INTO `sweetseasons`.`productos` (`id_producto`, `Nombre`, `id_categoria`, `Cantidad`, `Descripcion`, `Tamano`, `Precio`) VALUES ('1', 'Pastel Choco', '1', '4', 'Pastel delicioso de chocolate', 'M', '15000');
+INSERT INTO `sweetseasons`.`productos` (`id_producto`, `Nombre`, `id_categoria`, `Cantidad`, `Descripcion`, `Tamano`, `Precio`) VALUES ('2', 'Pastel Red', '1', '4', 'Pastel de Red Velvet', 'M', '15700');
+
