@@ -7,7 +7,6 @@ function Conecta() {
     $password = "pass";
     $dataBase = "SweetSeasons";
 
-    //1. Establecer la conexion mysqli
     $conexion = mysqli_connect($server, $user, $password, $dataBase);
 
     if(!$conexion){

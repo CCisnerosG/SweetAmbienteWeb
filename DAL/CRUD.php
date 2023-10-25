@@ -4,6 +4,7 @@ require_once "conexion.php";
 function getArray($sql) {
     try {
         $oConexion = Conecta();
+        
 
         if(mysqli_set_charset($oConexion, "utf8")){
             
