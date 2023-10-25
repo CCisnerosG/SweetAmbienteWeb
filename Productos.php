@@ -25,6 +25,10 @@ include "include/templates/header.php";
                             echo '<input type="hidden" name="id_producto" value="' . $row['id_producto'] . '">';
                             echo '<button type="submit" name="eliminar">Eliminar</button>';
                             echo '</form>';
+                            echo '<form method ="post" action="ProductosModificar.php">';      
+                            echo '<input type="hidden" name="id_producto" value="' . $row['id_producto'] . '">';
+                            echo '<button type="submit" name="modificar">Modificar</button>';
+                            echo '</form>';
                         }   
                     ?> 
             
