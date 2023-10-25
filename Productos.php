@@ -1,8 +1,8 @@
 <?php
 include "include/templates/header.php";
 ?>
-
-<h3>Productos</h3>
+<br><br><br><br>
+<h3 class="h3">Productos </h3>
         <main>
             <section class="container">
                 
@@ -13,6 +13,10 @@ include "include/templates/header.php";
 
                         $query = "SELECT id_producto, Nombre, id_categoria, Cantidad, Descripcion, Tamano, Precio FROM SweetSeasons.Productos";
                         $result = mysqli_query($conexion, $query);
+                        echo '<form method ="post" action="ProductosModificar.html">';      
+                        echo '<button type="submit" name="modificar">Modificar</button>';
+                        echo '</form>';
+                        echo '<button type="submit" name="Insertar"><a href="ProductosInsert.html">Agregar </a></button>';
 
                         while ($row = mysqli_fetch_assoc($result)) {
                             echo"<br>";
@@ -25,10 +29,7 @@ include "include/templates/header.php";
                             echo '<input type="hidden" name="id_producto" value="' . $row['id_producto'] . '">';
                             echo '<button type="submit" name="eliminar">Eliminar</button>';
                             echo '</form>';
-                            echo '<form method ="post" action="ProductosModificar.php">';      
-                            echo '<input type="hidden" name="id_producto" value="' . $row['id_producto'] . '">';
-                            echo '<button type="submit" name="modificar">Modificar</button>';
-                            echo '</form>';
+
                         }   
                     ?> 
             
