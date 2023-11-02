@@ -11,5 +11,7 @@ if (isset($_POST['eliminar'])) {
     } else {
         echo "Error al eliminar el producto: " . $conexion->error;
     }
+    
+    header('Location: Productos.php');
 }
 

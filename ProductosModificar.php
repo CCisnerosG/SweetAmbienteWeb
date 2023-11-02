@@ -18,4 +18,6 @@ if (isset($_POST['modificar'])) {
     } else {
         echo "Error al modificar el registro: " . $conexion->error;
     }
+
+    header('Location: Productos.php');
 }

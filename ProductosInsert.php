@@ -25,4 +25,5 @@ if(isset($_POST['agregar'])){
     $stmt->close();
     $conexion->close();
 
+    header('Location: Productos.php');
 }
