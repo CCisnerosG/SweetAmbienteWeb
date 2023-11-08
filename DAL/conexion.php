@@ -3,8 +3,8 @@
 
 function Conecta() {
     $server = "localhost";
-    $user = "root";
-    $password = "pass";
+    $user = "UserProyecto";
+    $password = "Pass123";
     $dataBase = "SweetSeasons";
 
     $conexion = mysqli_connect($server, $user, $password, $dataBase);

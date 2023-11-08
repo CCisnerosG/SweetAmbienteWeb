@@ -1,60 +1,71 @@
-create database SweetSeasons;
-use SweetSeasons;
+drop schema if exists SweetSeasons;
+drop user if exists UserProyecto;
+create schema SweetSeasons;
 
-CREATE TABLE categoria(
-	id_categoria  INT PRIMARY KEY,
+create user 'UserProyecto'@'%' identified by 'Pass123';
+grant all privileges on SweetSeasons.* to 'UserProyecto'@'%';
+flush privileges;
+
+CREATE TABLE SweetSeasons.categoria(
+	id_categoria  INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     Nombre VARCHAR(50),
-    Descripcion VARCHAR(100)
+    Descripcion VARCHAR(100),
+    ruta_imagen varchar(1024)
 )
 ENGINE = InnoDB;
 
-CREATE TABLE productos(
-	id_producto INT PRIMARY KEY,
+CREATE TABLE SweetSeasons.productos(
+	id_producto INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     Nombre VARCHAR(50),
-    id_categoria INT,
+    id_categoria INT NOT NULL,
     Cantidad INT,
     Descripcion VARCHAR(100),
     Tamano VARCHAR(1),
     Precio INT,    
+    ruta_imagen varchar(1024),
     FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria)
 )
 ENGINE = InnoDB;
 
-CREATE TABLE clientes(
-	id_cliente INT PRIMARY KEY,
+CREATE TABLE SweetSeasons.clientes(
+	id_cliente INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     Nombre VARCHAR(50),
     Primer_apellido VARCHAR(50),
     Segundo_apellido VARCHAR(50),
     Correo VARCHAR(50),
     Numero_telefonico VARCHAR(10),
-    Direccion varchar(50)
+    Direccion varchar(50),
+    ruta_imagen varchar(1024)
 )
 ENGINE = InnoDB;
 
-CREATE TABLE ventas(
-	id_venta INT PRIMARY KEY,
+CREATE TABLE SweetSeasons.ventas(
+	id_venta INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     Fecha_venta DATE,
-    id_cliente INT,
-    id_producto INT,
+    id_cliente INT NOT NULL,
+    id_producto INT NOT NULL,
     Cantidad INT,
     Precio INT,
     Total INT,
+	ruta_imagen varchar(1024),
     FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente),
     FOREIGN KEY (id_producto) REFERENCES productos(id_producto)
 )
 ENGINE = InnoDB;
 
-CREATE TABLE ingredientes(
-	id_ingrediente INT PRIMARY KEY,
+CREATE TABLE SweetSeasons.ingredientes(
+	id_ingrediente INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     Nombre VARCHAR(50),
     Unidad_medida VARCHAR(50),
     Precio INT,
-    id_proveedor INT
+    id_proveedor INT,
+    ruta_imagen varchar(1024),
+    FOREIGN KEY (id_proveedor) REFERENCES proveedores(id_proveedor)
 )
 ENGINE = InnoDB;
 
-CREATE TABLE proveedores(
-	id_proveedor INT PRIMARY KEY,
+CREATE TABLE SweetSeasons.proveedores(
+	id_proveedor INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     Nombre VARCHAR(50),
     Primer_apellido VARCHAR(50),
     Segundo_apellido VARCHAR(50),
@@ -62,28 +73,48 @@ CREATE TABLE proveedores(
     Correo VARCHAR(50),
     id_ingrediente INT,
     Estado VARCHAR(10),
-    FOREIGN KEY (id_ingrediente) REFERENCES ingredientes(id_ingrediente)
+    ruta_imagen varchar(1024)
 )
 ENGINE = InnoDB;
 
-CREATE TABLE compras(
-	id_compra INT PRIMARY KEY,
+CREATE TABLE SweetSeasons.compras(
+	id_compra INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     Fecha_compra DATE,
-    id_proveedor INT,
-    id_producto INT,
+    id_proveedor INT NOT NULL,
+    id_producto INT NOT NULL,
     Cantidad INT,
     Precio INT,
     Total INT,
+     ruta_imagen varchar(1024),
     FOREIGN KEY (id_proveedor) REFERENCES proveedores(id_proveedor),
     FOREIGN KEY (id_producto) REFERENCES productos(id_producto)
 )
 ENGINE = InnoDB;
 
+/*Inserts de las categorias*/
+INSERT INTO SweetSeasons.categoria (id_categoria, Nombre, Descripcion, ruta_imagen) VALUES
+(1, 'Pastelería', 'Comida dulce que se consume al final de una comida.', 'image/categoria/pasteleria.jpg'),
+(2, 'Repostería', 'Productos dulces como galletas y alfajores.', 'image/categoria/reposteria.jpg'),
+(3, 'Postres', 'Pasteles y tortas decoradas de manera artística.', 'image/categoria/postres.jpg');
 
-ALTER TABLE ingredientes
-ADD FOREIGN KEY (id_proveedor) REFERENCES proveedores(id_proveedor);
+/*Inserts de los productos por categoria*/
+/*Categoria 1*/
+INSERT INTO SweetSeasons.productos (id_producto, Nombre, id_categoria, Cantidad, Descripcion, Tamano, Precio, ruta_imagen)
+VALUES
+    (1, 'Pastel de Chocolate', 1, 50, 'Delicioso pastel de chocolate', 'M', 20, 'image/productos/pastel_chocolate.jfif'),
+    (2, 'Pastel de Fresas', 1, 30, 'Pastel con fresas frescas', 'L', 25, 'image/productos/pastel_fresas.jfif'),
+    (3, 'Cupcakes de Vainilla', 1, 80, 'Cupcakes suaves de vainilla', 'S', 15, 'image/productos/cupcake_vainilla.jfif');
 
-INSERT INTO `sweetseasons`.`categoria` (`id_categoria`, `Nombre`, `Descripcion`) VALUES ('1', 'Pasteleria', 'Productos de pasteleria');
-INSERT INTO `sweetseasons`.`productos` (`id_producto`, `Nombre`, `id_categoria`, `Cantidad`, `Descripcion`, `Tamano`, `Precio`) VALUES ('1', 'Pastel Choco', '1', '4', 'Pastel delicioso de chocolate', 'M', '15000');
-INSERT INTO `sweetseasons`.`productos` (`id_producto`, `Nombre`, `id_categoria`, `Cantidad`, `Descripcion`, `Tamano`, `Precio`) VALUES ('2', 'Pastel Red', '1', '4', 'Pastel de Red Velvet', 'M', '15700');
+/*Categoria 2*/
+INSERT INTO SweetSeasons.productos (id_producto, Nombre, id_categoria, Cantidad, Descripcion, Tamano, Precio, ruta_imagen)
+VALUES
+    (4,'Galletas de Chocolate', 2, 120, 'Galletas con chispas de chocolate', 'S', 8, 'image/productos/galleta_chocolate.jfif'),
+    (5, 'Alfajores de Dulce de Leche', 2, 90, 'Dulces alfajores rellenos', 'M', 10, 'image/productos/alfajores.jfif'),
+    (6, 'Galletas de Mantequilla', 2, 60, 'Galletas de mantequilla para decorar', 'L', 12, 'image/productos/galleta_mantequilla.jfif');
 
+/*Categoria 3*/
+INSERT INTO SweetSeasons.productos (id_producto, Nombre, id_categoria, Cantidad, Descripcion, Tamano, Precio, ruta_imagen)
+VALUES
+    (7,'Tiramisú', 3, 40, 'Postre italiano con café', 'M', 18, 'image/productos/tiramisu.jfif'),
+    (8,'Mousse de Chocolate', 3, 70, 'Mousse de chocolate cremoso', 'L', 22, 'image/productos/mouse.jfif'),
+    (9,'Flan de Caramelo', 3, 55, 'Clásico flan con caramelo', 'S', 12, 'image/productos/flan.jfif');

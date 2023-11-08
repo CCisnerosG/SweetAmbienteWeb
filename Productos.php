@@ -1,7 +1,7 @@
 <?php
 include "include/templates/header.php";
 ?>
-<br><br><br><br>
+<br><br>
 <h3 class="h3">Productos </h3>
         <main>
             <section class="container">
