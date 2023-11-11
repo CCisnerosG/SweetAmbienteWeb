@@ -71,11 +71,41 @@ h3{
     color: #4F260A;
 }
 
+img{
+    object-fit: cover;
+    object-position: center;
+    width: 25%;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    border-radius: 0.4rem;
+    outline: none;
+    cursor: pointer;
+    margin-top: 1rem;
+
+    text-decoration: none;
+    color:  #4F260A;
+    background-color:   #F5C8DA;
+    border:  none;
+
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Mountains of Christmas', serif;
+}
+
+.btn:visited{
+    text-decoration: none;
+    color:  #4F260A;
+}
+
+a:visited{
+    text-decoration: none; 
+    color:  #4F260A;
+}
+
 /*Fin Footer styles*/
 .footer{ 
-    position:fixed;
-    left:0px;
-    bottom:0px;
     width:100%;
     height: 4rem;
     text-align:  center;
@@ -87,7 +117,7 @@ h3{
     font-weight: 700;
     list-style: none;
     text-decoration: none;
-    margin-top: 1rem;
+    padding-top: 1rem;
     font-family: 'Mountains of Christmas', serif;
     color: #4F260A;
 }

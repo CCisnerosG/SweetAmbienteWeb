@@ -11,6 +11,9 @@
 
     <link rel="preload" href="style/styles.css">
     <link rel="stylesheet" href="style/styles.css">
+
+    <link rel="preload" href="style/normalize.css">
+    <link rel="stylesheet" href="style/normalize.css">
 </head>
 <body>
     <header class="head">
