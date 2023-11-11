@@ -22,6 +22,7 @@ include "include/templates/header.php";
                             echo "<p class='text'><strong>Cantidad:</strong> " . $row['Cantidad'] . "</p>";
                             echo "<p class='text'><strong>Tamaño:</strong> " . $row['Tamano'] . "</p>";
                             echo "<p class='text'><strong>Precio:</strong> " . $row['Precio'] . "</p>";
+                            echo "<p class='text'><strong>id_categoria:</strong> " . $row['id_categoria'] . "</p>";
                             echo '<form method ="post" action="ProductosModificar.html">';      
                             echo '<button type="submit" name="modificar">Modificar</button>';
                             echo '</form>';
