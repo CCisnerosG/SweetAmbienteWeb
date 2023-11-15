@@ -120,7 +120,11 @@ VALUES
     (9,'Flan de Caramelo', 3, 55, 'Clásico flan con caramelo', 'S', 12, 'image/productos/flan.jfif');
 
 --AGREGAR A LA BD PARA PROBAR PROVEEDORES
---Proveedores */
 INSERT INTO SweetSeasons.proveedores (id_proveedor, Nombre, Primer_apellido, Segundo_apellido, Numero_telefonico, Correo, id_ingrediente, Estado, ruta_imagen)
 VALUES
    (1, 'Proveedor1', 'Apellido1', 'Apellido2', '1234567890', 'proveedor1@example.com', 101, 'Activo', 'https://th.bing.com/th/id/OIP.72i7IHxkn9SPh59aSgecuAHaE8?pid=ImgDet&rs=1'),
+
+--AGREGAR A LA BD PARA PROBAR CLIENTES
+INSERT INTO SweetSeasons.clientes (id_cliente,Nombre, Primer_apellido, Segundo_apellido, Correo, Numero_telefonico, Direccion, ruta_imagen)
+VALUES
+   (1, 'Cliente1', 'Apellido1', 'Apellido2', 'cliente1@example.com', '1234567890', 'Dirección1', 'https://thumbs.dreamstime.com/b/una-cocinera-pastelera-muy-alegre-ofrece-pasteles-de-escaparate-pasteler%C3%ADa-femenina-en-el-bar-reposter%C3%ADa-199989121.jpg');

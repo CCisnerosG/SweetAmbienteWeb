@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +12,8 @@
 
     <link rel="preload" href="style/styles.css">
     <link rel="stylesheet" href="style/styles.css">
-
-    <link rel="preload" href="style/normalize.css">
-    <link rel="stylesheet" href="style/normalize.css">
 </head>
+
 <body>
     <header class="head">
         <nav>
@@ -29,12 +28,45 @@
                     <li class="ItemMenu"><a class="MenuLink" href="Proveedores.php">Proveedores</a> </li>
                     <li class="ItemMenu"><a class="MenuLink" href="Clientes.php">Clientes</a> </li>
                 </ul>
-                
+
             </div>
         </nav>
     </header>
-<br><br>
-    <p class="text2">Sweet Seasons página principal</p>
+    <br><br><br><br>
+    <h3 class="h3">Agregar Clientes</h3>
+    <section>
+        <form method="post" action="ClientesInsert.php">
+            <label for="Nombre">Digite el nombre que se desea agregar: </label>
+            <input type="text" name="Nombre" placeholder="Digite el nombre">
+            <br>
+            <br>
+            <label for="Primer_apellido">Digite el primer apellido que se desea agregar: </label>
+            <input type="text" name="Primer_apellido" placeholder="Digite el primer apellido">
+            <br>
+            <br>
+            <label for="Segundo_apellido">Digite el segundo apellido que se desea agregar: </label>
+            <input type="text" name="Segundo_apellido" placeholder="Digite el segundo apellido">
+            <br>
+            <br>
+            <label for="Correo">Digite el correo que se desea agregar: </label>
+            <input type="text" name="Correo" placeholder="Digite el correo">
+            <br>
+            <br>
+            <label for="Numero_telefonico">Digite el número telefónico que se desea agregar: </label>
+            <input type="text" name="Numero_telefonico" placeholder="Digite el número telefónico">
+            <br>
+            <br>
+            <label for="Direccion">Digite la dirección que se desea agregar: </label>
+            <input type="text" name="Direccion" placeholder="Digite la dirección">
+            <br>
+            <br>
+            <label for="ruta_imagen">Suba la imagen que se desea agregar: </label>
+            <input class="input" type="file" name="Imagen" placeholder="">
+            <br>
+            <br>
+            <input type="submit" name="agregar" value="Agregar">
+        </form>
+    </section>
 
     <footer class="footer">
         <nav>
@@ -44,4 +76,5 @@
         </nav>
     </footer>
 </body>
+
 </html>
