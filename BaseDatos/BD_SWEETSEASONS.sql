@@ -118,3 +118,9 @@ VALUES
     (7,'Tiramisú', 3, 40, 'Postre italiano con café', 'M', 18, 'image/productos/tiramisu.jfif'),
     (8,'Mousse de Chocolate', 3, 70, 'Mousse de chocolate cremoso', 'L', 22, 'image/productos/mouse.jfif'),
     (9,'Flan de Caramelo', 3, 55, 'Clásico flan con caramelo', 'S', 12, 'image/productos/flan.jfif');
+
+--AGREGAR A LA BD PARA PROBAR PROVEEDORES
+--Proveedores */
+INSERT INTO SweetSeasons.proveedores (id_proveedor, Nombre, Primer_apellido, Segundo_apellido, Numero_telefonico, Correo, id_ingrediente, Estado, ruta_imagen)
+VALUES
+   (1, 'Proveedor1', 'Apellido1', 'Apellido2', '1234567890', 'proveedor1@example.com', 101, 'Activo', 'https://th.bing.com/th/id/OIP.72i7IHxkn9SPh59aSgecuAHaE8?pid=ImgDet&rs=1'),

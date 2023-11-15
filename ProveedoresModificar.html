@@ -31,38 +31,46 @@
         </nav>
     </header>
     <br><br><br><br>
-    <h3 class="h3">Agregar Productos</h3>
+    <h3 class="h3">Modificar Proveedores</h3>
     <section>
-        <form method="post" action="ProductosInsert.php">
-            <label for="Nombre">Digite el nombre que se desea agregar: </label>
+        <form method="post" action="ProveedoresModificar.php">
+            <label for="id_proveedor">Digite el ID del proveedor que se desea modificar: </label>
+            <input type="text" name="id_proveedor" placeholder="Digite el ID del proveedor">
+            <br>
+            <br>
+            <label for="Nombre">Digite el nombre que se desea modificar: </label>
             <input type="text" name="Nombre" placeholder="Digite el nombre">
             <br>
             <br>
-            <label for="id_categoria">Digite el id categoria que se desea agregar: </label>
-            <input type="text" name="id_categoria" placeholder="Digite el id de la categoria">
+            <label for="Primer_apellido">Digite el primer apellido que se desea modificar: </label>
+            <input type="text" name="Primer_apellido" placeholder="Digite el primer apellido">
             <br>
             <br>
-            <label for="Cantidad">Digite la Cantidad que se desea agregar: </label>
-            <input type="text" name="Cantidad" placeholder="Digite la cantidad de productos">
+            <label for="Segundo_apellido">Digite el segundo apellido que se desea modificar: </label>
+            <input type="text" name="Segundo_apellido" placeholder="Digite el segundo apellido">
             <br>
             <br>
-            <label for="Descripcion">Digite la Descripcion que se desea agregar: </label>
-            <input type="text" name="Descripcion" placeholder="Digite la descripción del producto">
+            <label for="Numero_telefonico">Digite el número telefónico que se desea modificar: </label>
+            <input type="text" name="Numero_telefonico" placeholder="Digite el número telefónico">
             <br>
             <br>
-            <label for="Tamano">Digite el Tamaño que se desea agregar: </label>
-            <input type="text" name="Tamano" placeholder="Digite el tamaño del producto">
+            <label for="Correo">Digite el correo que se desea modificar: </label>
+            <input type="text" name="Correo" placeholder="Digite el correo">
             <br>
             <br>
-            <label for="Precio">Digite el Precio que se desea agregar: </label>
-            <input type="text" name="Precio" placeholder="Digite el precio del producto">
+            <label for="id_ingrediente">Digite el ID del ingrediente que se desea modificar: </label>
+            <input type="text" name="id_ingrediente" placeholder="Digite el ID del ingrediente">
             <br>
             <br>
-            <label for="ruta_imagen">Suba la imagen que se desea agregar: </label>
-            <input lass="input" type="file" name="Imagen" placeholder="">
+            <label for="Estado">Digite el estado que se desea modificar: </label>
+            <input type="text" name="Estado" placeholder="Digite el estado">
             <br>
             <br>
-            <input type="submit" name="agregar" value="Agregar">
+            <label for="ruta_imagen">Suba la imagen que se desea modificar: </label>
+            <input class="input" type="file" name="Imagen" placeholder="">
+            <br>
+            <br>
+            <input type="submit" name="modificar" value="Modificar">
         </form>
     </section>
 
