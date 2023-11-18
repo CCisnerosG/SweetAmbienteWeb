@@ -55,9 +55,10 @@ a:hover{
 /*Body Styles*/
 h3{
     padding-top: 3rem;
-    text-align:center;
-    font-size: 1.5rem;
-    font-weight: bold;
+    text-align:justify;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Mountains of Christmas', serif;
 }
 
 .text{

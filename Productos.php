@@ -1,5 +1,5 @@
 <?php
-include "include/templates/header.php";
+include 'include/templates/header.php';
 ?>
 <br><br>
 <h3 class="h3">Productos </h3>
@@ -8,12 +8,11 @@ include "include/templates/header.php";
                 
                     <?php
                         include('DAL/conexion.php');
-
                         $conexion = Conecta();
 
                         $query = "SELECT id_producto, Nombre, id_categoria, Cantidad, Descripcion, Tamano, Precio,ruta_imagen FROM SweetSeasons.Productos";
                         $result = mysqli_query($conexion, $query);
-                        echo '<button class="btn" type="submit" name="Insertar"><a href="ProductosInsert.html">Agregar</a></button>';
+                        echo "<button class='btn' type='submit' name='Insertar'><a href='ProductosInsert.html'>Agregar</a></button>";
                         echo"<br>";
                         echo"<br>";
                         while ($row = mysqli_fetch_assoc($result)) {
@@ -24,9 +23,8 @@ include "include/templates/header.php";
                             echo "<p class='text'><strong>Cantidad:</strong> " . $row['Cantidad'] . "</p>";
                             echo "<p class='text'><strong>Tamaño:</strong> " . $row['Tamano'] . "</p>";
                             echo "<p class='text'><strong>Precio:</strong> " . $row['Precio'] . "</p>";
-                            echo "<p class='text'><strong>id_categoria:</strong> " . $row['id_categoria'] . "</p>";
                             echo '<form method ="post" action="ProductosModificar.html">';      
-                            echo '<button type="submit" name="modificar">Modificar</button>';
+                            echo '<button class="btn" type="submit" name="modificar">Modificar</button>';
                             echo '</form>';
                             echo '<form method ="post" action="ProductosDelete.php">';      
                             echo '<input type="hidden" name="id_producto" value="' . $row['id_producto'] . '">';
@@ -39,7 +37,7 @@ include "include/templates/header.php";
             </section>
         </main>
 
-    </body>
+
 <?php
 include "include/templates/footer.php";
 ?>
