@@ -17,8 +17,8 @@
         echo '<button class="btn" type="submit" name="modificar">Modificar</button>';
         echo '</form>';
         echo '<form method ="post" action="CategoriaDelete.php">';      
-        echo '<input type="hidden" name="id_producto" value="' . $row['id_categoria'] . '">';
-        echo '<button class="btn" type="submit" name="eliminar">Eliminar</button>';
+        echo '<input type="hidden" name="id_categoria" value="' . $row['id_categoria'] . '">';
+        echo '<button class="btn" type="submit" name="eliminarCategoria">Eliminar</button>';
         echo '</form>';
     }   
 

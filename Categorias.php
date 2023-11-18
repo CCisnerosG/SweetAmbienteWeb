@@ -6,7 +6,7 @@ include "include/templates/header.php";
         <main>
             <section class="container">
                 <?php
-                echo "<button class='btn' type='submit' name='Insertar'><a href='ProductosInsert.html'>Agregar</a></button>";
+                echo "<button class='btn' type='submit' name='Insertar'><a href='CategoriaInsert.html'>Agregar</a></button>";
                  
                 include_once('CategoriasRead.php'); 
                 ?>

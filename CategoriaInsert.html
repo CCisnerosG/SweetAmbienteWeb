@@ -30,14 +30,10 @@
             </div>
         </nav>
     </header>
-    <br><br><br><br>
-    <h3 class="h3">Agregar Productos</h3>
+    <br><br>
+    <h3 class="h3">Agregar Categoría</h3>
     <section>
-        <form method="post" action="manejoCategorias.php">
-            <label for="id_categoria">Digite el id de la categoria que se desea agregar: </label>
-            <input type="text" name="id_categoria" placeholder="Digite el id de la categoria">
-            <br>
-            <br>
+        <form method="post" action="CategoriaInsert.php">
             <label for="Nombre">Digite el nombre que se desea agregar: </label>
             <input type="text" name="Nombre" placeholder="Digite el nombre">
             <br>
@@ -50,7 +46,7 @@
             <input class="input" type="file" name="Imagen" placeholder="">
             <br>
             <br>
-            <input type="submit" name="Agregar" value="agregar">
+            <input type="submit" name="agregarCategoria" value="Agregar">
         </form>
     </section>
 

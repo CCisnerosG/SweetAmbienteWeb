@@ -93,9 +93,9 @@ ENGINE = InnoDB;
 
 /*Inserts de las categorias*/
 INSERT INTO SweetSeasons.categoria (id_categoria, Nombre, Descripcion, ruta_imagen) VALUES
-(1, 'Pastelería', 'Comida dulce que se consume al final de una comida.', 'image/categoria/pasteleria.jpg'),
+(1, 'Postres', 'Comida dulce que se consume al final de una comida.', 'image/categoria/pasteleria.jpg'),
 (2, 'Repostería', 'Productos dulces como galletas y alfajores.', 'image/categoria/reposteria.jpg'),
-(3, 'Postres', 'Pasteles y tortas decoradas de manera artística.', 'image/categoria/postres.jpg');
+(3, 'Pastelería', 'Pasteles y tortas decoradas de manera artística.', 'image/categoria/postres.jpg');
 
 /*Inserts de los productos por categoria*/
 /*Categoria 1*/

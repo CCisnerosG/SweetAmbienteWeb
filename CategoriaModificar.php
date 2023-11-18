@@ -1,16 +1,16 @@
 <?php
 //Funcion para actualizar un dato en especifico de una categoria
 
-    if (isset($_POST['accion']) && $_POST['accion'] === 'modificarCategoria') {
+    if (isset ($_POST['modificarCategoria'])) {
         $id_categoria = $_POST['id_categoria'];
         $nombre = $_POST['Nombre'];
         $descripcion = $_POST['Descripcion'];
-        $imagen = $__POST['Imagen']; 
+        $imagen = $_POST['Imagen']; 
 
         include('DAL/conexion.php');
         $conexion = Conecta();
 
-        $sql = "UPDATE SweetSeasons.categorias SET Nombre = '$nombre', Descripcion = '$descripcion', ruta_imagen = '$imagen' WHERE id_categoria = '$id_categoria'";
+        $sql = "UPDATE SweetSeasons.categoria SET Nombre = '$nombre', Descripcion = '$descripcion', ruta_imagen = 'image/categoria/$imagen' WHERE id_categoria = '$id_categoria'";
     
         $result_update = mysqli_query($conexion, $sql); 
     

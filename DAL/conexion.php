@@ -1,6 +1,5 @@
 <?php
 
-
 function Conecta() {
     $server = "localhost";
     $user = "UserProyecto";
