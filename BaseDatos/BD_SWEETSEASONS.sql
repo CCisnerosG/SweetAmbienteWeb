@@ -128,3 +128,17 @@ VALUES
 INSERT INTO SweetSeasons.clientes (id_cliente,Nombre, Primer_apellido, Segundo_apellido, Correo, Numero_telefonico, Direccion, ruta_imagen)
 VALUES
    (1, 'Cliente1', 'Apellido1', 'Apellido2', 'cliente1@example.com', '1234567890', 'Dirección1', 'https://thumbs.dreamstime.com/b/una-cocinera-pastelera-muy-alegre-ofrece-pasteles-de-escaparate-pasteler%C3%ADa-femenina-en-el-bar-reposter%C3%ADa-199989121.jpg');
+
+
+/*Inserts de los Ingredientes*/
+INSERT INTO SweetSeasons.ingredientes (id_ingrediente, Nombre, Unidad_medida, Precio, id_proveedor, ruta_imagen) VALUES 
+(1, 'Harina', '5 Kilogramos', 10000, 1, 'image/ingredientes/harina.jfif'),
+(2, 'Azúcar', '2 Kilogramos', 10000, 1, 'image/ingredientes/azucar.jfif'),
+(3, 'Mantequilla', '500 Gramos', 10000, 1, 'image/ingredientes/mantequilla.jfif'),
+(4, 'Chocolate', '500 Gramos', 10000, 1, 'image/ingredientes/chocolate.jfif'),
+(5, 'Huevos', 'Docena', 10000, 1, 'image/ingredientes/huevos.jfif'),
+(6, 'Levadura', '50 Gramos', 10000, 1, 'image/ingredientes/levadura.jfif'),
+(7, 'Fresas', '250 Gramos', 10000, 1, 'image/ingredientes/fresas.jfif'),
+(8, 'Crema', '200 Mililitros', 10000, 1, 'image/ingredientes/crema.jfif'),
+ (9, 'Nueces', '100 Gramos', 10000, 1, 'image/ingredientes/nueces.jfif'),
+(10, 'Vainilla', '30 Mililitros', 10000, 1, 'image/ingredientes/vainilla.jfif');

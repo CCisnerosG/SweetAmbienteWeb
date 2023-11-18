@@ -25,7 +25,7 @@
                     <li class="ItemMenu"><a class="MenuLink" href="Categorias.php">Categoría de productos</a> </li>
                     <li class="ItemMenu"><a class="MenuLink" href="">Ventas </a> </li>
                     <li class="ItemMenu"><a class="MenuLink" href="">Compras</a> </li>
-                    <li class="ItemMenu"><a class="MenuLink" href="">Ingredientes</a> </li>
+                    <li class="ItemMenu"><a class="MenuLink" href="Ingredientes.php">Ingredientes</a> </li>
                     <li class="ItemMenu"><a class="MenuLink" href="Proveedores.php">Proveedores</a> </li>
                     <li class="ItemMenu"><a class="MenuLink" href="Clientes.php">Clientes</a> </li>
                 </ul>

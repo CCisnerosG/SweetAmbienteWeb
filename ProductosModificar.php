@@ -7,7 +7,7 @@ if (isset($_POST['modificar'])) {
     $descripcion = $_POST['Descripcion'];
     $tamano = $_POST['Tamano'];
     $precio = $_POST['Precio'];
-    $imagen = $_POST['Imagen'];
+    $imagen = 'image/productos/' . $_POST['Imagen'];
     
     include('DAL/conexion.php');
     $conexion = Conecta();

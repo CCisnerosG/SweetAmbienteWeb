@@ -11,9 +11,6 @@
 
     <link rel="preload" href="style/styles.css">
     <link rel="stylesheet" href="style/styles.css">
-
-    <link rel="preload" href="style/normalize.css">
-    <link rel="stylesheet" href="style/normalize.css">
 </head>
 <body>
     <header class="head">
@@ -33,8 +30,33 @@
             </div>
         </nav>
     </header>
-<br><br>
-    <p class="text2">Sweet Seasons página de inicio</p>
+    <br><br><br><br>
+    <h3 class="h3">Agregar ingrediente</h3>
+    <section>
+        <form method="post" action="IngredientesInsert.php">
+            <label for="Nombre">Digite el nombre que se desea agregar: </label>
+            <input type="text" name="Nombre" placeholder="">
+            <br>
+            <br>
+            <label for="Unidad_medida">Digite la cantidad y la unidad medida que se desea agregar: </label>
+            <input type="text" name="Unidad_medida" placeholder="">
+            <br>
+            <br>
+            <label for="Precio">Digite el precio que se desea agregar: </label>
+            <input type="text" name="Precio" placeholder="">
+            <br>
+            <br>
+            <label for="id_proveedor">Digite el id de proveedor que se desea agregar: </label>
+            <input type="text" name="id_proveedor" placeholder="">
+            <br>
+            <br>
+            <label for="ruta_imagen">Suba la imagen que se desea agregar: </label>
+            <input lass="input" type="file" name="Imagen" placeholder="">
+            <br>
+            <br>
+            <input class="btn" type="submit" name="ingredientesAgregar" value="agregar">
+        </form>
+    </section>
 
     <footer class="footer">
         <nav>

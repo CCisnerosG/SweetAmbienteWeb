@@ -11,9 +11,6 @@
 
     <link rel="preload" href="style/styles.css">
     <link rel="stylesheet" href="style/styles.css">
-
-    <link rel="preload" href="style/normalize.css">
-    <link rel="stylesheet" href="style/normalize.css">
 </head>
 <body>
     <header class="head">
@@ -22,7 +19,7 @@
                 <ul class="MenuList">
                     <li class="ItemMenu"><a class="MenuText" href="index.html">Inicio </a> </li>
                     <li class="ItemMenu"><a class="MenuLink" href="Productos.php">Productos</a> </li>
-                    <li class="ItemMenu"><a class="MenuLink" href="Categorias.php">Categoría de productos</a> </li>
+                    <li class="ItemMenu"><a class="MenuLink" href="Categorias.php">Categoría de ingredientes</a> </li>
                     <li class="ItemMenu"><a class="MenuLink" href="">Ventas </a> </li>
                     <li class="ItemMenu"><a class="MenuLink" href="">Compras</a> </li>
                     <li class="ItemMenu"><a class="MenuLink" href="Ingredientes.php">Ingredientes</a> </li>
@@ -33,8 +30,37 @@
             </div>
         </nav>
     </header>
-<br><br>
-    <p class="text2">Sweet Seasons página de inicio</p>
+    <br><br><br><br>
+    <h3 class="h3">Modificar ingrediente</h3>
+    <section>
+        <form method="post" action="ingredientesModificar.php">
+            <label for="id_ingrediente">Digite el id ingrediente que se desea modificar: </label>
+            <input type="text" name="id_ingrediente" placeholder="">
+            <br>
+            <br>
+            <label for="Nombre">Digite el nombre que se desea modificar: </label>
+            <input type="text" name="Nombre" placeholder="">
+            <br>
+            <br>
+            <label for="Unidad_medida">Digite la cantidad y la unidad medida que se desea modificar: </label>
+            <input type="text" name="Unidad_medida" placeholder="">
+            <br>
+            <br>
+            <label for="Precio">Digite el precio que se desea modificar: </label>
+            <input type="text" name="Precio" placeholder="">
+            <br>
+            <br>
+            <label for="id_proveedor">Digite el id de proveedor que se desea modificar: </label>
+            <input type="text" name="id_proveedor" placeholder="">
+            <br>
+            <br>
+            <label for="ruta_imagen">Suba la imagen que se desea modificar: </label>
+            <input lass="input" type="file" name="Imagen" placeholder="">
+            <br>
+            <br>
+            <input class="btn" type="submit" name="ingredientesModificar" value="Modificar">
+        </form>
+    </section>
 
     <footer class="footer">
         <nav>
