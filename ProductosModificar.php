@@ -1,8 +1,8 @@
 <?php
 if (isset($_POST['modificar'])) {
-    $id_producto = $_POST['id_producto'];
+    $id_producto = $_POST['producto'];
     $nombre = $_POST['Nombre'];
-    $id_categoria = $_POST['id_categoria'];
+    $id_categoria = $_POST['categoria'];
     $cantidad = $_POST['Cantidad'];
     $descripcion = $_POST['Descripcion'];
     $tamano = $_POST['Tamano'];
@@ -11,16 +11,18 @@ if (isset($_POST['modificar'])) {
     
     include('DAL/conexion.php');
     $conexion = Conecta();
-     echo $id_producto = $_POST['id_producto'];;
+    
     $sql = "UPDATE SweetSeasons.Productos SET Nombre = '$nombre', id_categoria = '$id_categoria', Cantidad = '$cantidad', Descripcion = '$descripcion', Tamano = '$tamano', Precio = '$precio', ruta_imagen = '$imagen' WHERE id_producto = '$id_producto'";
 
     $result_update = mysqli_query($conexion, $sql); 
 
     if ($result_update) {
-        echo "Registro modificado con éxito.";
-        header('Location: Productos.php');
-        exit();
+        /*echo "Registro modificado con éxito.";*/
+        echo "<script>alert('Registro modificado con éxito.');</script>";
+        
     } else {
-        echo "Error al modificar el registro: "  . mysqli_error($conexion);
+        echo "<script>alert('Error al modificar el registro: " . mysqli_error($conexion) . "');</script>";
     }
+
+    header("refresh:0.5;url=Productos.php");
 }

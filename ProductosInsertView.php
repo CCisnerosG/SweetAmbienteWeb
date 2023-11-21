@@ -38,24 +38,46 @@
             <input type="text" name="Nombre" placeholder="Digite el nombre">
             <br>
             <br>
-            <label for="id_categoria">Digite el id categoria que se desea agregar: </label>
-            <input type="text" name="id_categoria" placeholder="Digite el id de la categoria">
+            <label for="categoria">Seleccione la categoria que se desea elegir: </label>
+            <select name="categoria">
+                <?php
+                    include('DAL/conexion.php');
+                    $conexion = Conecta();
+                    
+                    $query = "SELECT id_categoria, Nombre FROM SweetSeasons.categoria";
+                    $result = mysqli_query($conexion, $query);
+    
+                    if ($result) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo "<option value=\"" . $row['id_categoria'] . "\">" . $row['Nombre'] . "</option>";
+                        }
+                    } else {
+                        echo "<option value=\"\">Error al obtener las categorías</option>";
+                    }
+    
+                    mysqli_close($conexion);
+                ?>
+            </select>
             <br>
             <br>
             <label for="Cantidad">Digite la Cantidad que se desea agregar: </label>
-            <input type="text" name="Cantidad" placeholder="Digite la cantidad de productos">
+            <input type="number" name="Cantidad" placeholder="Digite la cantidad">
             <br>
             <br>
             <label for="Descripcion">Digite la Descripcion que se desea agregar: </label>
-            <input type="text" name="Descripcion" placeholder="Digite la descripción del producto">
+            <input type="text" name="Descripcion" placeholder="Digite la descripción ">
             <br>
             <br>
-            <label for="Tamano">Digite el Tamaño que se desea agregar: </label>
-            <input type="text" name="Tamano" placeholder="Digite el tamaño del producto">
+            <label for="Tamano">Seleccione el Tamaño que se desea agregar:</label>
+                <select name="Tamano">
+                    <option value='S'>S</option>
+                    <option value='M'>M</option>
+                    <option value='L'>L</option>
+                </select>
             <br>
             <br>
             <label for="Precio">Digite el Precio que se desea agregar: </label>
-            <input type="text" name="Precio" placeholder="Digite el precio del producto">
+            <input type="number" name="Precio" placeholder="Digite el precio">
             <br>
             <br>
             <label for="ruta_imagen">Suba la imagen que se desea agregar: </label>
