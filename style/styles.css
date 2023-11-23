@@ -110,12 +110,16 @@ a:hover {
     padding-left: 1rem;
 }
 /*Body Styles*/
-h3 {
-    padding-top: 3rem;
-    text-align: justify;
+.h3 {
+    padding-top: 4rem;
+    padding-left: 3rem;
+
     font-size: 2rem;
+    font-style: normal;
     font-weight: 700;
+    line-height: normal;
     font-family: 'Mountains of Christmas', serif;
+    color: #4F260A;
 }
 
 .text {
@@ -134,7 +138,14 @@ h3 {
 img {
     object-fit: cover;
     object-position: center;
-    width: 50%;
+    width:100%;
+}
+
+.img_ingredientes {
+    object-fit: cover;
+    object-position: center;
+    width:100%;
+    height:500px;
 }
 
 .btn {
@@ -143,6 +154,40 @@ img {
     outline: none;
     cursor: pointer;
     margin-top: 1rem;
+
+    text-decoration: none;
+    color: #4F260A;
+    background-color: #F5C8DA;
+    border: none;
+
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Mountains of Christmas', serif;
+}
+.title_ingredientes{
+    font-size: 1.6rem;
+    font-weight: 700;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Mountains of Christmas', serif;
+    color: #4F260A;
+}
+
+.text_ingredientes{
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    color: #4F260A;
+}
+
+.btn_Ingredientes {
+    padding: 1rem 3rem 1rem 3rem;
+    border-radius: 0.4rem;
+    outline: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-left: 1rem;
 
     text-decoration: none;
     color: #4F260A;
