@@ -28,6 +28,8 @@
                     <li class="ItemMenu"><a class="MenuLink" href="Ingredientes.php">Ingredientes</a> </li>
                     <li class="ItemMenu"><a class="MenuLink" href="Proveedores.php">Proveedores</a> </li>
                     <li class="ItemMenu"><a class="MenuLink" href="Clientes.php">Clientes</a> </li>
+                    <li class="ItemMenu"><a class="MenuLink" href="InicioSesion.html">Incio de Sesión</a> </li>
+
                 </ul>
                 
             </div>
