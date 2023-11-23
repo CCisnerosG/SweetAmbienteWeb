@@ -7,6 +7,11 @@
     <meta name="Keywords" content="pasteles, cupcakes, postres, galletas, casas de jengibre" />
     <title>Sweet Seasons</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="preload" href="style/styles.css">
@@ -17,21 +22,44 @@
 </head>
 <body>
     <header class="head">
-        <nav>
-            <div>
-                <ul class="MenuList">
-                    <li class="ItemMenu"><a class="MenuText" href="index.html">Inicio </a> </li>
-                    <li class="ItemMenu"><a class="MenuLink" href="Productos.php">Productos</a> </li>
-                    <li class="ItemMenu"><a class="MenuLink" href="Categorias.php">Categoría de productos</a> </li>
-                    <li class="ItemMenu"><a class="MenuLink" href="Ventas.php">Ventas </a> </li>
-                    <li class="ItemMenu"><a class="MenuLink" href="Compras.php">Compras</a> </li>
-                    <li class="ItemMenu"><a class="MenuLink" href="Ingredientes.php">Ingredientes</a> </li>
-                    <li class="ItemMenu"><a class="MenuLink" href="Proveedores.php">Proveedores</a> </li>
-                    <li class="ItemMenu"><a class="MenuLink" href="Clientes.php">Clientes</a> </li>
-                    <li class="ItemMenu"><a class="MenuLink" href="InicioSesion.html">Incio de Sesión</a> </li>
+    <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="MenuText" href="index.html">Inicio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Productos.php">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="MenuLink" href="Categorias.php">Categoría de productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="MenuLink" href="Ventas.php">Ventas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Compras.php">Compras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Ingredientes.php">Ingredientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Proveedores.php">Proveedores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Clientes.php">Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="sesionLink" class="nav-link" href="InicioSesion.html">Iniciar Sesión</a>
+                        </li>
 
-                </ul>
-                
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>

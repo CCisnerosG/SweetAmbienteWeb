@@ -5,15 +5,15 @@
 }*/
 
 /*Inicio Header styles*/
-.head{
+.head {
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     background-color: #F5C8DA;
 }
 
-.MenuList{
+.MenuList {
     list-style: none;
     width: 80%;
     height: 100%;
@@ -22,11 +22,11 @@
     padding: 0;
 }
 
-.ItemMenu{
+.ItemMenu {
     margin: 0 2rem;
 }
 
-.MenuText{
+.MenuText {
     font-size: 22px;
     font-weight: 700;
     list-style: none;
@@ -35,7 +35,7 @@
     color: #4F260A;
 }
 
-.MenuLink{
+.MenuLink {
     font-size: 16px;
     font-weight: 600;
     list-style: none;
@@ -44,7 +44,7 @@
     color: #4F260A;
 }
 
-a:hover{
+a:hover {
     color: #FF69A4;
     font-weight: bold;
     opacity: 70%;
@@ -53,19 +53,20 @@ a:hover{
 /*Fin Header styles*/
 
 /*Body Styles*/
-h3{
+h3 {
     padding-top: 3rem;
-    text-align:justify;
+    text-align: justify;
     font-size: 2rem;
     font-weight: 700;
     font-family: 'Mountains of Christmas', serif;
 }
 
-.text{
+.text {
     font-size: 1rem;
     font-family: 'Inter', sans-serif;
 }
-.text2{
+
+.text2 {
     margin-top: 2rem;
     font-size: 1rem;
     font-weight: 600;
@@ -73,13 +74,13 @@ h3{
     color: #4F260A;
 }
 
-img{
+img {
     object-fit: cover;
     object-position: center;
-    width: 25%;
+    width: 50%;
 }
 
-.btn{
+.btn {
     padding: 1rem 2rem;
     border-radius: 0.4rem;
     outline: none;
@@ -87,34 +88,34 @@ img{
     margin-top: 1rem;
 
     text-decoration: none;
-    color:  #4F260A;
-    background-color:   #F5C8DA;
-    border:  none;
+    color: #4F260A;
+    background-color: #F5C8DA;
+    border: none;
 
     font-size: 1rem;
     font-weight: 700;
     font-family: 'Mountains of Christmas', serif;
 }
 
-.btn:visited{
+.btn:visited {
     text-decoration: none;
-    color:  #4F260A;
+    color: #4F260A;
 }
 
-a:visited{
-    text-decoration: none; 
-    color:  #4F260A;
+a:visited {
+    text-decoration: none;
+    color: #4F260A;
 }
 
 /*Fin Footer styles*/
-.footer{ 
-    width:100%;
+.footer {
+    width: 100%;
     height: 4rem;
-    text-align:  center;
+    text-align: center;
     background-color: #F5C8DA;
 }
 
-.FooterText{
+.FooterText {
     font-size: 24px;
     font-weight: 700;
     list-style: none;
@@ -123,4 +124,7 @@ a:visited{
     font-family: 'Mountains of Christmas', serif;
     color: #4F260A;
 }
+
+
+
 /*Fin Footer styles*/
