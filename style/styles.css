@@ -52,6 +52,63 @@ a:hover {
 
 /*Fin Header styles*/
 
+/*Login styles*/
+.loginTitle{
+    font-size: 2rem;
+    font-weight: 700;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Mountains of Christmas', serif;
+    color: #4F260A;
+}
+
+.btn_login{
+    padding: 1rem 2rem;
+    border-radius: 0.6rem;
+    outline: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    text-decoration: none;
+    color: #4F260A;
+    background-color:   #CBE6F9; 
+    border:  none;
+
+    
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+}
+
+.text_login {
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    color: #4F260A;
+}
+
+.text_label{
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    color: #4F260A;
+}
+
+.text_input{
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    color: #d0d0d0;
+}
+
+.arrow{
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
 /*Body Styles*/
 h3 {
     padding-top: 3rem;
@@ -96,6 +153,7 @@ img {
     font-weight: 700;
     font-family: 'Mountains of Christmas', serif;
 }
+
 
 .btn:visited {
     text-decoration: none;
