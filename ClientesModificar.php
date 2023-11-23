@@ -1,13 +1,13 @@
 <?php
 if (isset($_POST['modificar'])) {
-    $id_cliente = $_POST['id_cliente'];
+    $id_cliente = $_POST['cliente'];
     $nombre = $_POST['Nombre'];
     $primer_apellido = $_POST['Primer_apellido'];
     $segundo_apellido = $_POST['Segundo_apellido'];
     $correo = $_POST['Correo'];
     $numero_telefonico = $_POST['Numero_telefonico'];
     $direccion = $_POST['Direccion'];
-    $imagen = $_POST['Imagen'];
+    $imagen = 'image/clientes/' . $_POST['Imagen'];
     
     include('DAL/conexion.php');
     $conexion = Conecta();
@@ -17,11 +17,11 @@ if (isset($_POST['modificar'])) {
     $result_update = mysqli_query($conexion, $sql); 
 
     if ($result_update) {
-        echo "Registro modificado con éxito.";
-        header('Location: Clientes.php');
-        exit();
+        echo "<script>alert('Registro modificado con éxito.');</script>";
     } else {
-        echo "Error al modificar el registro: "  . mysqli_error($conexion);
+        echo "<script>alert('Error al modificar el registro: " . mysqli_error($conexion) . "');</script>";
     }
+
+    header("refresh:0.5;url=Clientes.php");
 }
 ?>

@@ -19,7 +19,7 @@
                 <ul class="MenuList">
                     <li class="ItemMenu"><a class="MenuText" href="index.html">Inicio </a> </li>
                     <li class="ItemMenu"><a class="MenuLink" href="Productos.php">Productos</a> </li>
-                    <li class="ItemMenu"><a class="MenuLink" href="">Categoría de productos</a> </li>
+                    <li class="ItemMenu"><a class="MenuLink" href="Categorias.php">Categoría de productos</a> </li>
                     <li class="ItemMenu"><a class="MenuLink" href="">Ventas </a> </li>
                     <li class="ItemMenu"><a class="MenuLink" href="">Compras</a> </li>
                     <li class="ItemMenu"><a class="MenuLink" href="Ingredientes.php">Ingredientes</a> </li>
@@ -30,42 +30,63 @@
         </nav>
     </header>
     <br><br><br><br>
-    <h3 class="h3">Modificar Clientes</h3>
+    <h3 class="h3">Agregar Proveedores</h3>
     <section>
-        <form method="post" action="ClientesModificar.php">
-            <label for="id_cliente">Digite el id del cliente que se desea modificar: </label>
-            <input type="text" name="id_cliente" placeholder="Digite el id del cliente">
-            <br>
-            <br>
-            <label for="Nombre">Digite el nombre que se desea modificar: </label>
+        <form method="post" action="ProveedoresInsert.php" enctype="multipart/form-data">
+            <label for="Nombre">Digite el nombre que se desea agregar: </label>
             <input type="text" name="Nombre" placeholder="Digite el nombre">
             <br>
             <br>
-            <label for="Primer_apellido">Digite el primer apellido que se desea modificar: </label>
+            <label for="Primer_apellido">Digite el primer apellido que se desea agregar: </label>
             <input type="text" name="Primer_apellido" placeholder="Digite el primer apellido">
             <br>
             <br>
-            <label for="Segundo_apellido">Digite el segundo apellido que se desea modificar: </label>
+            <label for="Segundo_apellido">Digite el segundo apellido que se desea agregar: </label>
             <input type="text" name="Segundo_apellido" placeholder="Digite el segundo apellido">
             <br>
             <br>
-            <label for="Correo">Digite el correo que se desea modificar: </label>
-            <input type="text" name="Correo" placeholder="Digite el correo">
-            <br>
-            <br>
-            <label for="Numero_telefonico">Digite el número telefónico que se desea modificar: </label>
+            <label for="Numero_telefonico">Digite el número telefónico que se desea agregar: </label>
             <input type="text" name="Numero_telefonico" placeholder="Digite el número telefónico">
             <br>
             <br>
-            <label for="Direccion">Digite la dirección que se desea modificar: </label>
-            <input type="text" name="Direccion" placeholder="Digite la dirección">
+            <label for="Correo">Digite el correo que se desea agregar: </label>
+            <input type="text" name="Correo" placeholder="Digite el correo">
             <br>
             <br>
-            <label for="ruta_imagen">Suba la imagen que se desea modificar: </label>
+            <label for="id_ingrediente">Seleccione el ingrediente que se desea agregar:</label>
+            <select name="id_ingrediente">
+                <?php
+                    include('DAL/conexion.php');
+                    $conexion = Conecta();
+                    
+                    $query = "SELECT id_ingrediente, Nombre FROM SweetSeasons.ingredientes";
+                    $result = mysqli_query($conexion, $query);
+    
+                    if ($result) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo "<option value=\"" . $row['id_ingrediente'] . "\">" . $row['Nombre'] . "</option>";
+                        }
+                    } else {
+                        echo "<option value=\"\">Error al obtener los ingredientes</option>";
+                    }
+    
+                    mysqli_close($conexion);
+                ?>
+            </select>
+            <br>
+            <br>
+            <label for="Estado">Seleccione el Estado que se desea agregar:</label>
+            <select name="Estado">
+                <option value="Activo">Activo</option>
+                <option value="Inactivo">Inactivo</option>
+            </select>
+            <br>
+            <br>
+            <label for="Imagen">Suba la imagen que se desea agregar: </label>
             <input class="input" type="file" name="Imagen" placeholder="">
             <br>
             <br>
-            <input type="submit" name="modificar" value="Modificar">
+            <input type="submit" name="agregar" value="Agregar">
         </form>
     </section>
 
@@ -78,8 +99,3 @@
     </footer>
 </body>
 </html>
-
-
-
-
-

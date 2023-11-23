@@ -15,9 +15,8 @@ include 'include/templates/header.php';
                         echo "<button class='btn' type='submit' name='Insertar'><a href='ProductosInsertView.php'>Agregar</a></button>";
                         echo"<br>";
                         echo '<form method ="post" action="ProductosModificarVista.php">';      
-                            echo '<button class="btn" type="submit" name="modificar">Modificar</button>';
+                        echo '<button class="btn" type="submit" name="modificar">Modificar</button>';
                         echo '</form>';
-                        echo"<br>";
                         echo"<br>";
                         while ($row = mysqli_fetch_assoc($result)) {
                             echo"<br>";
