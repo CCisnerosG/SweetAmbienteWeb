@@ -7,7 +7,9 @@ include "include/templates/header.php";
             <section class="container">
                 <?php
                 echo "<button class='btn' type='submit' name='Insertar'><a href='ProveedoresInsertView.php'>Agregar</a></button>";
-                 
+                echo '<form method ="post" action="ProveedoresModificarVista.php">';
+                echo '<button class="btn" type="submit" name="modificar">Modificar</button>';
+                echo '</form>';
                 include_once('ProveedoresRead.php'); 
                 ?>
             </section>

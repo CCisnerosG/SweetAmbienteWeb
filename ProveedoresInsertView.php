@@ -32,7 +32,7 @@
     <br><br><br><br>
     <h3 class="h3">Agregar Proveedores</h3>
     <section>
-        <form method="post" action="ProveedoresInsert.php" enctype="multipart/form-data">
+        <form method="post" action="ProveedoresInsert.php" enctype="multipart/form-data"onsubmit="return validarFormularioProveedores()">
             <label for="Nombre">Digite el nombre que se desea agregar: </label>
             <input type="text" name="Nombre" placeholder="Digite el nombre">
             <br>
@@ -46,11 +46,11 @@
             <br>
             <br>
             <label for="Numero_telefonico">Digite el número telefónico que se desea agregar: </label>
-            <input type="text" name="Numero_telefonico" placeholder="Digite el número telefónico">
+            <input type="text" name="Numero_telefonico" placeholder="Digite el número telefónico" >
             <br>
             <br>
             <label for="Correo">Digite el correo que se desea agregar: </label>
-            <input type="text" name="Correo" placeholder="Digite el correo">
+            <input type="text" name="Correo" placeholder="Digite el correo" >
             <br>
             <br>
             <label for="id_ingrediente">Seleccione el ingrediente que se desea agregar:</label>
@@ -86,9 +86,11 @@
             <input class="input" type="file" name="Imagen" placeholder="">
             <br>
             <br>
-            <input type="submit" name="agregar" value="Agregar">
+            <input class="btn"type="submit" name="agregar" value="Agregar">
         </form>
     </section>
+
+    <script src="ValidacionProveedores.js"></script>
 
     <footer class="footer">
         <nav>

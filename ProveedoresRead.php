@@ -17,13 +17,11 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo "<p class='text'><strong>Correo:</strong> " . $row['Correo'] . "</p>";
     echo "<p class='text'><strong>ID Ingrediente:</strong> " . $row['id_ingrediente'] . "</p>";
     echo "<p class='text'><strong>Estado:</strong> " . $row['Estado'] . "</p>";
-    echo '<form method ="post" action="ProveedoresModificarVista.php">';
-    echo '<button class="btn" type="submit" name="modificar">Modificar</button>';
-    echo '</form>';
     echo '<form method ="post" action="ProveedoresDelete.php">';
     echo '<input type="hidden" name="id_proveedor" value="' . $row['id_proveedor'] . '">';
     echo '<button class="btn" type="submit" name="eliminar">Eliminar</button>';
     echo '</form>';
+    echo "<br>";
 }
 
 ?>

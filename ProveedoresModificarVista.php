@@ -17,7 +17,6 @@
         <nav>
             <div>
                 <ul class="MenuList">
-                    <!-- Otras opciones del menú... -->
                     <li class="ItemMenu"><a class="MenuLink" href="Proveedores.php">Proveedores</a> </li>
                 </ul>
                 
@@ -27,7 +26,7 @@
     <br><br><br><br>
     <h3 class="h3">Modificar Proveedores</h3>
     <section>
-        <form method="post" action="ProveedoresModificar.php">
+        <form method="post" action="ProveedoresModificar.php" onsubmit="return validarFormularioProveedoresM()">
             <label for="proveedor">Seleccione el proveedor que se desea modificar: </label>
             <select name="proveedor">
             <?php
@@ -81,10 +80,10 @@
             <input class="input" type="file" name="Imagen" placeholder="">
             <br>
             <br>
-            <input type="submit" name="modificar" value="Modificar">
+            <input class="btn" type="submit" name="modificar" value="Modificar">
         </form>
     </section>
-
+    <script src="ValidacionProveedores.js"></script>
     <footer class="footer">
         <nav>
             <div>

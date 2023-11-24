@@ -33,7 +33,7 @@
     <br><br><br><br>
     <h3 class="h3">Modificar Cliente</h3>
     <section>
-        <form method="post" action="ClientesModificar.php">
+        <form method="post" action="ClientesModificar.php" onsubmit="return validarFormularioModificarClientes()">
             <label for="cliente">Seleccione el cliente que se desea modificar: </label>
             <select name="cliente">
             <?php
@@ -69,11 +69,11 @@
             <br>
             <br>
             <label for="Correo">Digite el correo que se desea modificar: </label>
-            <input type="text" name="Correo" placeholder="Digite el correo">
+            <input type="text" name="Correo" placeholder="Digite el correo" onsubmit="validateCorreoModificarClientes()">
             <br>
             <br>
             <label for="Numero_telefonico">Digite el número telefónico que se desea modificar: </label>
-            <input type="text" name="Numero_telefonico" placeholder="Digite el número telefónico">
+            <input type="text" name="Numero_telefonico" placeholder="Digite el número telefónico" onsubmit="validateNumeroTelefonoModificarClientes()">
             <br>
             <br>
             <label for="Direccion">Digite la dirección que se desea modificar: </label>
@@ -84,10 +84,10 @@
             <input class="input" type="file" name="Imagen" placeholder="">
             <br>
             <br>
-            <input type="submit" name="modificar" value="Modificar">
+            <input class="btn" type="submit" name="modificar" value="Modificar">
         </form>
     </section>
-
+    <script src="ValidacionClientes.js"></script>
     <footer class="footer">
         <nav>
             <div>
