@@ -32,9 +32,9 @@
 <body>
 
     <br><br><br><br>
-    <h3 class="h3">Modificar Categoría</h3>
+    <h3 class="h3">Modificar Compra</h3>
     <section>
-        <form method="post" action="ComprasModificar.php">
+        <form method="post" action="ComprasModificar.php" onsubmit="return validateFormM()">
             <label for="id_compra">Ingrese el id de compra: </label>
             <input type="text" name="id_compra" placeholder="Ingrese el id de compra">
             <br>
@@ -52,21 +52,21 @@
             <br>
             <br>
             <label for="cantidad">Seleccione la cantidad: </label>
-            <input type="number" name="cantidad">
+            <input type="number" name="cantidad" placeholder="Digite la cantidad" onblur="validateCantidadM()">
             <br>
             <br>
             <label for="precio">Seleccione el precio: </label>
-            <input type="number" name="precio">
+            <input type="number" name="precio" placeholder="Digite el precio" onblur="validatePrecioM()">
             <br>
             <br>
             <label for="total">Seleccione el total: </label>
-            <input type="number" name="total">
+            <input type="number" name="total" placeholder="Digite el total" onblur="validateTotalM()">
             <br>
             <br>
             <input class="btn" type="submit" name="modificarCompras" value="Modificar">
         </form>
     </section>
-
+    <script src="ValidacionCompras.js"></script>
     <footer class="footer">
         <nav>
             <div>

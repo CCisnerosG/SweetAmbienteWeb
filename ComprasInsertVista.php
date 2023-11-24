@@ -32,7 +32,7 @@
     <br><br>
     <h3 class="h3">Agregar Compra</h3>
     <section>
-        <form method="post" action="ComprasInsert.php">
+        <form method="post" action="ComprasInsert.php"onsubmit="return validateFormI()">
             <label for="Fecha">Ingrese la fecha de compra: </label>
             <input type="date" name="Fecha">
             <br>
@@ -82,16 +82,16 @@
             <br>
             <br>
             <label for="Cantidad">Ingrese la cantidad de artículos comprados: </label>
-            <input type="text" name="Cantidad" placeholder="Digite la cantidad">
+            <input type="text" name="Cantidad" placeholder="Digite la cantidad" onblur="validateCantidadCompra()">
             <br>
             <br>
             <label for="Total">Ingrese el total invertido en la compra: </label>
-            <input type="text" name="Total" placeholder="Digite el total">
+            <input type="text" name="Total" placeholder="Digite el total"  onblur="validateTotalCompra()">
             <br>
             <input class="btn" type="submit" name="agregarCompras" value="Agregar">
         </form>
     </section>
-
+    <script src="ValidacionCompras.js"></script>
     <footer class="footer">
     <nav>
         <div>
