@@ -36,8 +36,9 @@ function validateFormI() {
     var descripcion = document.getElementsByName("Descripcion")[0].value;
     var tamano = document.getElementsByName("Tamano")[0].value;
     var precio = document.getElementsByName("Precio")[0].value;
+    var Imagen = document.getElementsByName("Imagen")[0].value;
 
-    if (nombre === "" || categoria === "" || cantidad === "" || descripcion === "" || tamano === "" || precio === "") {
+    if (nombre === "" || categoria === "" || cantidad === "" || descripcion === "" || tamano === "" || precio === ""||Imagen === "") {
         alert("Por favor, complete todos los campos antes de enviar el formulario para agregar un producto.");
         return false;
     }
@@ -86,8 +87,10 @@ function validateFormM() {
     var descripcion = document.getElementsByName("Descripcion")[0].value;
     var tamano = document.getElementsByName("Tamano")[0].value;
     var precio = document.getElementsByName("Precio")[0].value;
+    var Imagen = document.getElementsByName("Imagen")[0].value;
 
-    if (producto === "" || nombre === "" || categoria === "" || cantidad === "" || descripcion === "" || tamano === "" || precio === "") {
+
+    if (producto === "" || nombre === "" || categoria === "" || cantidad === "" || descripcion === "" || tamano === "" || precio === ""||Imagen === "") {
         alert("Por favor, complete todos los campos antes de enviar el formulario de modificar el Producto deseado.");
         return false;
     }
