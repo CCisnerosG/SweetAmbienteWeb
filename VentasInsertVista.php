@@ -1,10 +1,12 @@
+<!-- Archivo: VentasInsert.php -->
 <?php
 include "include/templates/header.php";
 ?>
+
 <br><br>
 <h3 class="h3">Agregar venta</h3>
 <section>
-    <form method="post" action="VentasInsert.php">
+    <form method="post" action="VentasInsert.php" onsubmit="return validateFormV()">
         <label for="Fecha">Ingrese la fecha de venta: </label>
         <input type="date" name="Fecha">
         <br>
@@ -25,7 +27,6 @@ include "include/templates/header.php";
             } else {
                 echo "<option value=\"\">Error al obtener clientes</option>";
             }
-
             ?>
         </select>
         <br>
@@ -48,22 +49,24 @@ include "include/templates/header.php";
 
             mysqli_close($conexion);
             ?>
-
         </select>
         <input type="hidden" name="Precio" id="Precio" value="">
         <br>
         <br>
         <label for="Cantidad">Ingrese la cantidad de artículos vendidos: </label>
-        <input type="text" name="Cantidad" placeholder="Digite la cantidad">
+        <input type="text" name="Cantidad" placeholder="Digite la cantidad" onblur="validateCantidadV()">
         <br>
         <br>
         <label for="Total">Ingrese el total vendido: </label>
-        <input type="text" name="Total" placeholder="Digite el total">
+        <input type="text" name="Total" placeholder="Digite el total" onblur="validateTotalV()">
         <br>
         <input class="btn" type="submit" name="agregarVentas" value="Agregar">
+        <br>
+        <br>
     </form>
 </section>
 
+<script src="ValidacionVentas.js"></script>
 
 <?php
 include "include/templates/footer.php";

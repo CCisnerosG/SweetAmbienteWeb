@@ -33,7 +33,7 @@
     <br><br><br><br>
     <h3 class="h3">Agregar Productos</h3>
     <section>
-        <form method="post" action="ProductosInsert.php">
+        <form method="post" action="ProductosInsert.php" onsubmit="return validateFormI()">
             <label for="Nombre">Digite el nombre que se desea agregar: </label>
             <input type="text" name="Nombre" placeholder="Digite el nombre">
             <br>
@@ -61,7 +61,7 @@
             <br>
             <br>
             <label for="Cantidad">Digite la Cantidad que se desea agregar: </label>
-            <input type="number" name="Cantidad" placeholder="Digite la cantidad">
+            <input type="number" name="Cantidad" placeholder="Digite la cantidad" onblur="validateQuantityI()">
             <br>
             <br>
             <label for="Descripcion">Digite la Descripcion que se desea agregar: </label>
@@ -77,7 +77,7 @@
             <br>
             <br>
             <label for="Precio">Digite el Precio que se desea agregar: </label>
-            <input type="number" name="Precio" placeholder="Digite el precio">
+            <input type="number" name="Precio" placeholder="Digite el precio" onblur="validatePriceI()">
             <br>
             <br>
             <label for="ruta_imagen">Suba la imagen que se desea agregar: </label>
@@ -94,6 +94,7 @@
                 <p class="FooterText">Sweet Seasons</p>
             </div>
         </nav>
+        <script src="ValidacionProductos.js"></script>
     </footer>
 </body>
 </html>

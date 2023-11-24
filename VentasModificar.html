@@ -32,10 +32,10 @@
 <body>
 
     <br><br><br><br>
-    <h3 class="h3">Modificar Categoría</h3>
+    <h3 class="h3">Modificar Venta</h3>
     <section>
-        <form method="post" action="VentasModificar.php">
-            <label for="id_venta">Ingrese el id de venta: </label>
+        <form method="post" action="VentasModificar.php" onsubmit="return validateFormVM()">
+            <label for="id_venta">Digite el id de venta: </label>
             <input type="text" name="id_venta" placeholder="Ingrese el id de venta">
             <br>
             <br>
@@ -43,29 +43,32 @@
             <input type="date" name="Fecha_venta">
             <br>
             <br>
-            <label for="id_proveedor">Digite el id del proveedor que desea ingresar: </label>
-            <input type="text" name="id_proveedor" placeholder="Digite el id de proveedor">
+            <label for="id_cliente">Digite el id del cliente: </label>
+            <input type="text" name="id_cliente" placeholder="Digite el id del cliente">
             <br>
             <br>
-            <label for="id_producto">Digite el id de producto que desea ingresar: </label>
+            <label for="id_producto">Digite el id del producto: </label>
             <input type="text" name="id_producto" placeholder="Digite el id de producto">
             <br>
             <br>
-            <label for="cantidad">Seleccione la cantidad: </label>
-            <input type="number" name="cantidad">
+            <label for="cantidad">Digite la cantidad: </label>
+            <input type="number" name="cantidad" placeholder="Digite la cantidad" onblur="validateCantidadVM()">
             <br>
             <br>
-            <label for="precio">Seleccione el precio: </label>
-            <input type="number" name="precio">
+            <label for="precio">Digite el precio: </label>
+            <input type="number" name="precio" placeholder="Digite el precio" onblur="validatePrecioVM()">
             <br>
             <br>
-            <label for="total">Seleccione el total: </label>
-            <input type="number" name="total">
+            <label for="total">Digite el total: </label>
+            <input type="number" name="total" placeholder="Digite el total" onblur="validateTotalVM()">
             <br>
             <br>
             <input class="btn" type="submit" name="modificarVentas" value="Modificar">
         </form>
     </section>
+
+    <script src="ValidacionVentas.js"></script>
+
 
     <footer class="footer">
         <nav>

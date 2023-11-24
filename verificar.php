@@ -2,7 +2,7 @@
 session_start();
 
 $usuarios = [
-    'usuario1' => 'clave1',  // Usuario y contraseña de ejemplo
+    'usuario1@gmail.com' => 'clave1',  // Usuario y contraseña de ejemplo
     // Agrega más usuarios según sea necesario
 ];
 

@@ -33,7 +33,7 @@
     <br><br>
     <h3 class="h3">Agregar Categoría</h3>
     <section>
-        <form method="post" action="CategoriaInsert.php">
+        <form method="post" action="CategoriaInsert.php"  onsubmit="return validateFormCPI()">
             <label for="Nombre">Digite el nombre que se desea agregar: </label>
             <input type="text" name="Nombre" placeholder="Digite el nombre">
             <br>
@@ -49,6 +49,8 @@
             <input class="btn" type="submit" name="agregarCategoria" value="Agregar">
         </form>
     </section>
+
+    <script src="ValidacionCategoriaProducto.js"></script>
 
     <footer class="footer">
         <nav>

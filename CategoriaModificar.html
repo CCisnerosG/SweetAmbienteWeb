@@ -33,7 +33,7 @@
     <br><br><br><br>
     <h3 class="h3">Modificar Categoría</h3>
     <section>
-        <form method="post" action="CategoriaModificar.php">
+        <form method="post" action="CategoriaModificar.php" onsubmit="return validateFormCPM()">
             <label for="id_categoria">Digite el id de la categoria que se desea modificar: </label>
             <input type="text" name="id_categoria" placeholder="Digite el id de la categoria">
             <br>
@@ -43,7 +43,7 @@
             <br>
             <br>
             <label for="Descripcion">Digite la Descripcion que se desea modificar: </label>
-            <input type="text" name="Descripcion" placeholder="Digite la descripción de la categoria">
+            <input type="text" name="Descripcion" placeholder="Digite la descripción">
             <br>
             <br>
             <label for="ruta_imagen">Suba la imagen que se desea modificar: </label>
@@ -53,6 +53,8 @@
             <input class="btn" type="submit" name="modificarCategoria" value="Modificar">
         </form>
     </section>
+
+    <script src="ValidacionCategoriaProducto.js"></script>
 
     <footer class="footer">
         <nav>
