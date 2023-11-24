@@ -33,31 +33,31 @@
     <br><br><br><br>
     <h3 class="h3">Agregar ingrediente</h3>
     <section>
-        <form method="post" action="IngredientesInsert.php">
+        <form method="post" action="IngredientesInsert.php" onsubmit="return validateAllFieldsIngrediente()">
             <label for="Nombre">Digite el nombre que se desea agregar: </label>
-            <input type="text" name="Nombre" placeholder="">
+            <input type="text" name="Nombre" placeholder="Digite el nombre">
             <br>
             <br>
             <label for="Unidad_medida">Digite la cantidad y la unidad medida que se desea agregar: </label>
-            <input type="text" name="Unidad_medida" placeholder="">
+            <input type="text" name="Unidad_medida" placeholder="Digite la Unidad de medida">
             <br>
             <br>
             <label for="Precio">Digite el precio que se desea agregar: </label>
-            <input type="text" name="Precio" placeholder="">
+            <input type="text" name="Precio" placeholder="Digite el precio" onblur="validatePrecioIngrediente()">
             <br>
             <br>
             <label for="id_proveedor">Digite el id de proveedor que se desea agregar: </label>
-            <input type="text" name="id_proveedor" placeholder="">
+            <input type="text" name="id_proveedor" placeholder="Digite el proveedor">
             <br>
             <br>
             <label for="ruta_imagen">Suba la imagen que se desea agregar: </label>
             <input lass="input" type="file" name="Imagen" placeholder="">
             <br>
             <br>
-            <input class="btn" type="submit" name="ingredientesAgregar" value="agregar">
+            <input class="btn" type="submit" name="ingredientesAgregar" value="Agregar">
         </form>
     </section>
-
+    <script src="ValidacionIngredientes.js"></script>
     <footer class="footer">
         <nav>
             <div>

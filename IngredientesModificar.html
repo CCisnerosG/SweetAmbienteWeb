@@ -33,25 +33,25 @@
     <br><br><br><br>
     <h3 class="h3">Modificar ingrediente</h3>
     <section>
-        <form method="post" action="ingredientesModificar.php">
+        <form method="post" action="ingredientesModificar.php" onsubmit="return validateAllFieldsIngredienteM()">
             <label for="id_ingrediente">Digite el id ingrediente que se desea modificar: </label>
-            <input type="text" name="id_ingrediente" placeholder="">
+            <input type="text" name="id_ingrediente" placeholder="Digite el id del ingrediente">
             <br>
             <br>
             <label for="Nombre">Digite el nombre que se desea modificar: </label>
-            <input type="text" name="Nombre" placeholder="">
+            <input type="text" name="Nombre" placeholder="Digite el nombre">
             <br>
             <br>
             <label for="Unidad_medida">Digite la cantidad y la unidad medida que se desea modificar: </label>
-            <input type="text" name="Unidad_medida" placeholder="">
+            <input type="text" name="Unidad_medida" placeholder= "Digite la Unidad de medida">
             <br>
             <br>
             <label for="Precio">Digite el precio que se desea modificar: </label>
-            <input type="text" name="Precio" placeholder="">
+            <input type="text" name="Precio" placeholder="Digite el precio"  onblur="validatePrecioIngredienteM()">
             <br>
             <br>
             <label for="id_proveedor">Digite el id de proveedor que se desea modificar: </label>
-            <input type="text" name="id_proveedor" placeholder="">
+            <input type="text" name="id_proveedor" placeholder="Digite el id del proveedor">
             <br>
             <br>
             <label for="ruta_imagen">Suba la imagen que se desea modificar: </label>
@@ -61,7 +61,7 @@
             <input class="btn" type="submit" name="ingredientesModificar" value="Modificar">
         </form>
     </section>
-
+    <script src="ValidacionIngredientes.js"></script>
     <footer class="footer">
         <nav>
             <div>
