@@ -69,11 +69,11 @@
             <br>
             <br>
             <label for="Correo">Digite el correo que se desea modificar: </label>
-            <input type="text" name="Correo" placeholder="Digite el correo" onsubmit="validateCorreoModificarClientes()">
+            <input type="text" name="Correo" placeholder="Digite el correo" >
             <br>
             <br>
             <label for="Numero_telefonico">Digite el número telefónico que se desea modificar: </label>
-            <input type="text" name="Numero_telefonico" placeholder="Digite el número telefónico" onsubmit="validateNumeroTelefonoModificarClientes()">
+            <input type="text" name="Numero_telefonico" placeholder="Digite el número telefónico">
             <br>
             <br>
             <label for="Direccion">Digite la dirección que se desea modificar: </label>
