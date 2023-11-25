@@ -52,6 +52,36 @@ function validarFormularioClientes() {
 
 //----------------------------------FUNCIONES DE MODIFICAR CLIENTES-------------------------------
 
+//FUNCION PARA NUMERO DE TELEFONO
+function validateNumeroTelefonoM() {
+    var telefonoInput = document.getElementsByName("Numero_telefonico")[0];
+
+    // Utiliza una expresión regular para verificar si solo contiene números
+    if (!/^\d+$/.test(telefonoInput.value)) {
+        alert("Por favor, ingrese solo números en el campo de número telefónico.");
+        markInvalidFieldVM(telefonoInput);
+        return false;
+    }
+
+    unmarkFieldVM(telefonoInput);
+    return true;
+}
+
+//FUNCION PARA CORREO ELECTRONICO
+function validateCorreoM() {
+    var correoInput = document.getElementsByName("Correo")[0];
+    var correoValue = correoInput.value;
+
+    // Utiliza una expresión regular para verificar si tiene el dominio @gmail.com
+    if (!/^[a-zA-Z0-9._-]+@gmail\.com$/.test(correoValue)) {
+        alert("Por favor, ingrese un correo electrónico válido con el dominio @gmail.com.");
+        markInvalidFieldVM(correoInput);
+        return false;
+    }
+
+    unmarkFieldVM(correoInput);
+    return true;
+}
 //FUNCION PARA VALIDAR CAMPOS LLENOS 
 function validarFormularioModificarClientes() {
     var nombre = document.getElementsByName("Nombre")[0].value;

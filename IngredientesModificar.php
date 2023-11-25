@@ -16,7 +16,6 @@ if (isset($_POST['ingredientesModificar'])) {
 
     if ($result_update) {
         echo "<script>alert('Registro modificado con éxito.');</script>";
-        exit();
     } else {
         echo "<script>alert('Error al modificar el ingrediente: " . mysqli_error($conexion) . "');</script>";
     }

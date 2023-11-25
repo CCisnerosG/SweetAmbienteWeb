@@ -81,7 +81,7 @@ include 'include/templates/header.php';
         </form>
     </section>
 
-    <script src="ValidacionProductos.js"></script>
+    <script src="js/ValidacionProductos.js"></script>
 
 <?php
 include "include/templates/footer.php";

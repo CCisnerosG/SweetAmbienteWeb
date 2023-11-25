@@ -40,11 +40,11 @@ include "include/templates/header.php";
             <br>
             <br>
             <label for="Correo">Digite el correo que se desea modificar: </label>
-            <input type="text" name="Correo" placeholder="Digite el correo" >
+            <input type="text" name="Correo" placeholder="Digite el correo" onblur="validateCorreoM()">
             <br>
             <br>
             <label for="Numero_telefonico">Digite el número telefónico que se desea modificar: </label>
-            <input type="text" name="Numero_telefonico" placeholder="Digite el número telefónico">
+            <input type="text" name="Numero_telefonico" placeholder="Digite el número telefónico" onblur="validateNumeroTelefonoM()">
             <br>
             <br>
             <label for="Direccion">Digite la dirección que se desea modificar: </label>
@@ -58,7 +58,7 @@ include "include/templates/header.php";
             <input class="btn" type="submit" name="modificar" value="Modificar">
         </form>
     </section>
-    <script src="ValidacionClientes.js"></script>
+    <script src="js/ValidacionClientes.js"></script>
     
 <?php
 include "include/templates/footer.php";

@@ -46,7 +46,7 @@ include 'include/templates/header.php';
             <input class="btn" type="submit" name="ingredientesAgregar" value="Agregar">
         </form>
     </section>
-    <script src="ValidacionIngredientes.js"></script>
+    <script src="js/ValidacionIngredientes.js"></script>
 
 <?php
 include "include/templates/footer.php";

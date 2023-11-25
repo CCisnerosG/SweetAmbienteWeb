@@ -18,10 +18,11 @@ function validateAllFieldsIngrediente() {
     var nombreInput = document.getElementsByName("Nombre")[0];
     var unidadMedidaInput = document.getElementsByName("Unidad_medida")[0];
     var precioInput = document.getElementsByName("Precio")[0];
-    var idProveedorInput = document.getElementsByName("id_proveedor")[0];
+    var idProveedor = document.getElementsByName("proveedor")[0]; 
     var ImagenInput = document.getElementsByName("Imagen")[0];
+
     // Verificar si algún campo está vacío
-    if (nombreInput.value === "" || unidadMedidaInput.value === "" || precioInput.value === "" || idProveedorInput.value === ""|| ImagenInput.value === "") {
+    if (nombreInput.value === "" || unidadMedidaInput.value === "" || precioInput.value === "" || idProveedor.value === "" || ImagenInput.value === "") {
         alert("Por favor, complete todos los campos antes de enviar el formulario.");
         return false;
     }
@@ -33,6 +34,8 @@ function validateAllFieldsIngrediente() {
 
     return true;
 }
+
+
 
 //----------------------------------FUNCIONES DE MODIFICAR INGREDIENTES----------------------------------------
 

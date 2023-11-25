@@ -18,11 +18,11 @@ include 'include/templates/header.php';
             <br>
             <br>
             <label for="Numero_telefonico">Digite el número telefónico que se desea agregar: </label>
-            <input type="text" name="Numero_telefonico" placeholder="Digite el número telefónico" >
+            <input type="text" name="Numero_telefonico" placeholder="Digite el número telefónico" onblur="validateNumeroTelefono()">
             <br>
             <br>
             <label for="Correo">Digite el correo que se desea agregar: </label>
-            <input type="text" name="Correo" placeholder="Digite el correo" >
+            <input type="text" name="Correo" placeholder="Digite el correo" onblur="validateCorreo()"> 
             <br>
             <br>
             <label for="id_ingrediente">Seleccione el ingrediente que se desea agregar:</label>
@@ -62,7 +62,7 @@ include 'include/templates/header.php';
         </form>
     </section>
 
-    <script src="ValidacionProveedores.js"></script>
+    <script src="js/ValidacionProveedores.js"></script>
 
 <?php
 include "include/templates/footer.php";

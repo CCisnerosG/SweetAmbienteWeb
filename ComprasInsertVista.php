@@ -65,7 +65,7 @@ include 'include/templates/header.php';
             </div>
         </form>
     </section>
-    <script src="ValidacionCompras.js"></script>
+    <script src="js/ValidacionCompras.js"></script>
 
 <?php
 include "include/templates/footer.php";

@@ -58,6 +58,8 @@ include 'include/templates/header.php';
             <input class="btn" type="submit" name="agregar" value="Agregar">
         </form>
     </section>
+    
+    <script src="js/ValidacionProductos.js"></script>
 
 <?php
 include "include/templates/footer.php";

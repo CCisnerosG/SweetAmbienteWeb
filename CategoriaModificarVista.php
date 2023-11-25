@@ -51,7 +51,7 @@ include 'include/templates/header.php';
     </section>
 </div>
 
-<script src="ValidacionCategoriaProducto.js"></script>
+<script src="js/ValidacionCategoriaProducto.js"></script>
 
 <?php
 include "include/templates/footer.php";

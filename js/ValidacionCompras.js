@@ -99,10 +99,10 @@ function validateTotalM() {
 
 // FUNCIÓN PARA VALIDAR QUE TODOS LOS CAMPOS ESTÉN LLENOS EN MODIFICAR COMPRAS
 function validateFormM() {
-    var idCompraInput = document.getElementsByName("id_compra")[0];
+    var idCompraInput = document.getElementsByName("Compra")[0];
     var fechaCompraInput = document.getElementsByName("Fecha_compra")[0];
-    var idProveedorInput = document.getElementsByName("id_proveedor")[0];
-    var idProductoInput = document.getElementsByName("id_producto")[0];
+    var idProveedorInput = document.getElementsByName("Proveedor")[0];
+    var idProductoInput = document.getElementsByName("Producto")[0];
     var cantidadInput = document.getElementsByName("cantidad")[0];
     var precioInput = document.getElementsByName("precio")[0];
     var totalInput = document.getElementsByName("total")[0];
@@ -128,6 +128,7 @@ function validateFormM() {
 
     return true;
 }
+
 
 
 // Funciones auxiliares para cambiar el color de fondo de los campos inválidos

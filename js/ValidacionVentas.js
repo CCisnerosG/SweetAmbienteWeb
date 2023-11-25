@@ -92,10 +92,10 @@ function validatePrecioVM() {
 
 //FUNCIÓN PARA VALIDAR CAMPOS LLENOS
 function validateFormVM() {
-    var idVenta = document.getElementsByName("id_venta")[0].value;
+    var idVenta = document.getElementsByName("Venta")[0].value;
     var fechaVenta = document.getElementsByName("Fecha_venta")[0].value;
-    var idCliente = document.getElementsByName("id_cliente")[0].value;
-    var idProducto = document.getElementsByName("id_producto")[0].value;
+    var idCliente = document.getElementsByName("Cliente")[0].value;
+    var idProducto = document.getElementsByName("Producto")[0].value;
     var cantidad = document.getElementsByName("cantidad")[0].value;
     var precio = document.getElementsByName("precio")[0].value;
     var total = document.getElementsByName("total")[0].value;

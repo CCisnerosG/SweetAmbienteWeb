@@ -1,4 +1,34 @@
 //------------------------------FUNCIONES PARA INSERTAR PROVEEDORES-------------------------------------
+//FUNCION PARA NUMERO DE TELEFONO
+function validateNumeroTelefono() {
+    var telefonoInput = document.getElementsByName("Numero_telefonico")[0];
+
+    // Utiliza una expresión regular para verificar si solo contiene números
+    if (!/^\d+$/.test(telefonoInput.value)) {
+        alert("Por favor, ingrese solo números en el campo de número telefónico.");
+        markInvalidFieldVM(telefonoInput);
+        return false;
+    }
+
+    unmarkFieldVM(telefonoInput);
+    return true;
+}
+
+//FUNCION PARA CORREO ELECTRONICO
+function validateCorreo() {
+    var correoInput = document.getElementsByName("Correo")[0];
+    var correoValue = correoInput.value;
+
+    // Utiliza una expresión regular para verificar si tiene el dominio @gmail.com
+    if (!/^[a-zA-Z0-9._-]+@gmail\.com$/.test(correoValue)) {
+        alert("Por favor, ingrese un correo electrónico válido con el dominio @gmail.com.");
+        markInvalidFieldVM(correoInput);
+        return false;
+    }
+
+    unmarkFieldVM(correoInput);
+    return true;
+}
 
 //FUNCIÓN DE VALIDAR CAMPOS LLENOS
 function validarFormularioProveedores() {
@@ -22,6 +52,36 @@ function validarFormularioProveedores() {
 
 //------------------------------FUNCIONES PARA MODIFICAR PROVEEDORES-------------------------------------
 
+//FUNCION PARA NUMERO DE TELEFONO
+function validateNumeroTelefonoM() {
+    var telefonoInput = document.getElementsByName("Numero_telefonico")[0];
+
+    // Utiliza una expresión regular para verificar si solo contiene números
+    if (!/^\d+$/.test(telefonoInput.value)) {
+        alert("Por favor, ingrese solo números en el campo de número telefónico.");
+        markInvalidFieldVM(telefonoInput);
+        return false;
+    }
+
+    unmarkFieldVM(telefonoInput);
+    return true;
+}
+
+//FUNCION PARA CORREO ELECTRONICO
+function validateCorreoM() {
+    var correoInput = document.getElementsByName("Correo")[0];
+    var correoValue = correoInput.value;
+
+    // Utiliza una expresión regular para verificar si tiene el dominio @gmail.com
+    if (!/^[a-zA-Z0-9._-]+@gmail\.com$/.test(correoValue)) {
+        alert("Por favor, ingrese un correo electrónico válido con el dominio @gmail.com.");
+        markInvalidFieldVM(correoInput);
+        return false;
+    }
+
+    unmarkFieldVM(correoInput);
+    return true;
+}
 //FUNCIÓN DE VALIDAR CAMPOS LLENOS
 function validarFormularioProveedoresM() {
     var proveedorSelect = document.getElementsByName("proveedor")[0];
@@ -41,3 +101,12 @@ function validarFormularioProveedoresM() {
     return true;
 }
 
+//-----------------------------------------------------------------------------------------------
+// Funciones auxiliares para cambiar el color de fondo de los campos inválidos
+function markInvalidFieldVM(element) {
+    element.style.backgroundColor = "#FFB6C1"; // Cambiar a un color que indique error
+}
+
+function unmarkFieldVM(element) {
+    element.style.backgroundColor = ""; // Restaurar el color por defecto
+}
