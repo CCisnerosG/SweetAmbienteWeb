@@ -1,10 +1,9 @@
 <?php
-
     if (isset ($_POST['modificarCompras'])) {
-        $id_compra = $_POST['id_compra'];
+        $id_compra = $_POST['Compra'];
         $Fecha_compra = $_POST['Fecha_compra'];
-        $id_proveedor = $_POST['id_proveedor'];
-        $id_producto = $_POST['id_producto'];
+        $id_proveedor = $_POST['Proveedor'];
+        $id_producto = $_POST['Producto'];
         $cantidad = $_POST['cantidad'];
         $precio = $_POST['precio'];
         $total = $_POST['total'];

@@ -17,7 +17,6 @@ if (isset($_POST['modificar'])) {
     $result_update = mysqli_query($conexion, $sql); 
 
     if ($result_update) {
-        /*echo "Registro modificado con éxito.";*/
         echo "<script>alert('Registro modificado con éxito.');</script>";
         
     } else {

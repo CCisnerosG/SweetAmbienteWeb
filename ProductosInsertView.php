@@ -55,7 +55,7 @@ include 'include/templates/header.php';
             <input lass="input" type="file" name="Imagen" placeholder="">
             <br>
             <br>
-            <input type="submit" name="agregar" value="Agregar">
+            <input class="btn" type="submit" name="agregar" value="Agregar">
         </form>
     </section>
 

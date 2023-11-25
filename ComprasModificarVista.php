@@ -8,7 +8,7 @@ include 'include/templates/header.php';
     <section class="container" style="width: 40%;">
         <form method="post" action="ComprasModificar.php" onsubmit="return validateFormM()" class="row g-3">
             <div class="col-12">
-                <label for="id_compra" class="form-label">Ingrese la compra que desea modificar:</label>
+                <label for="Compra" class="form-label">Ingrese la compra que desea modificar:</label>
                 <select name="Compra" class="form-select">
                     <?php
                         include('DAL/conexion.php');
