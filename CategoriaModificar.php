@@ -2,7 +2,7 @@
 //Funcion para actualizar un dato en especifico de una categoria
 
     if (isset ($_POST['modificarCategoria'])) {
-        $id_categoria = $_POST['id_categoria'];
+        $id_categoria = $_POST['categoria'];
         $nombre = $_POST['Nombre'];
         $descripcion = $_POST['Descripcion'];
         $imagen = $_POST['Imagen']; 
@@ -15,9 +15,10 @@
         $result_update = mysqli_query($conexion, $sql); 
     
         if ($result_update) {
-            echo "Categoría modificada con éxito.";
-            exit();
+            echo "<script>alert('Registro modificado con éxito.');</script>";
+
         } else {
-            echo "Error al modificar la categoría: "  . mysqli_error($conexion);
+            echo "<script>alert('Error al modificar la categoria: " . mysqli_error($conexion) . "');</script>";
         }
+        header("refresh:0.5;url=Categorias.php");
     }

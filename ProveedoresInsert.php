@@ -18,14 +18,14 @@ if(isset($_POST['agregar'])){
     $stmt->bind_param("ssssssss", $nombre, $primer_apellido, $segundo_apellido, $numero_telefonico, $correo, $id_ingrediente, $estado, $imagen);
 
     if ($stmt->execute()) {
-        echo "Se han ingresado correctamente los datos";
+        echo "<script>alert('Registro agregado con éxito.');</script>";
     } else {
-        echo "Error al ingresar los datos: " . $stmt->error;
+        echo "<script>alert('Error al agregar el proveedor: " . $stmt->error . "');</script>";
     }
 
     $stmt->close();
     $conexion->close();
 
-    header('Location: Proveedores.php'); 
+    header('refresh:0.5;url=Proveedores.php'); 
 }
 ?>

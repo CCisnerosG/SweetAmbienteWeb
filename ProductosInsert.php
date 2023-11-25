@@ -18,9 +18,9 @@ if(isset($_POST['agregar'])){
     $stmt->bind_param("sissssd", $nombre, $id_categoria, $cantidad, $descripcion, $tamano, $precio, $imagen);
 
     if ($stmt->execute()) {
-        echo "Se han ingresado correctamente los datos";
+        echo "<script>alert('Registro agregado con éxito.');</script>";
     } else {
-        echo "Error al ingresar los datos: " . $stmt->error;
+        echo "<script>alert('Error al agregar el producto: " . $stmt->error . "');</script>";
     }
-
+    header("refresh:0.5;url=Productos.php");
 }

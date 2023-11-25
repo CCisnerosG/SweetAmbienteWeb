@@ -18,15 +18,15 @@ if(isset($_POST['agregarCompras'])){
     $stmt->bind_param("siidii", $fechaCompra, $idProveedor, $idProducto, $cantidad, $precio, $total);
 
     if ($stmt->execute()) {
-        echo "Se han ingresado correctamente los datos de la compra";
+        echo "<script>alert('Registro agregado con éxito.');</script>";
     } else {
-        echo "Error al ingresar los datos de la compra: " . $stmt->error;
+        echo "<script>alert('Error al agregar la compra registro: " . $stmt->error . "');</script>";
     }
 
     $stmt->close();
     $conexion->close();
 
-    header("Location: Compras.php");
+    header("refresh:0.5;url=Compras.php");
 }
 
 function obtenerPrecioProducto($idProducto) {

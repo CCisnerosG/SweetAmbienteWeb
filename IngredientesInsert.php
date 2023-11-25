@@ -4,7 +4,7 @@
         $nombre = $_POST['Nombre'];
         $unidad = $_POST['Unidad_medida'];
         $precio = $_POST['Precio'];
-        $id_proveedor = $_POST['id_proveedor'];
+        $id_proveedor = $_POST['proveedor'];
         $imagen = 'image/ingredientes/' .  $_POST['Imagen'];
     
         include('DAL/conexion.php');
@@ -16,11 +16,12 @@
         $stmt->bind_param("sssss", $nombre, $unidad, $precio ,$id_proveedor , $imagen);
     
         if ($stmt->execute()) {
-            echo "Se han ingresado correctamente los datos del ingrediente";
+            echo "<script>alert('Registro agregado con éxito.');</script>";
         } else {
-            echo "Error al ingresar los datos del ingrediente: " . $stmt->error;
+            echo "<script>alert('Error al agregar la categoría: " . $stmt->error . "');</script>";
         }
     
         $stmt->close();
         $conexion->close();
+        header("refresh:0.5;url=Ingredientes.php");
     }

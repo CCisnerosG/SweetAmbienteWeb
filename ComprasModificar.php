@@ -17,11 +17,11 @@
         $result_update = mysqli_query($conexion, $sql); 
     
         if ($result_update) {
-            echo "Compra modificada con éxito.";
+            echo "<script>alert('Registro modificado con éxito.');</script>";
             
         } else {
-            echo "Error al modificar la compra: "  . mysqli_error($conexion);
+            echo "<script>alert('Error al modificar el registro: " . mysqli_error($conexion) . "');</script>";
         }
 
-        header("Location: Compras.php");
+        header("refresh:0.5;url=Compras.php");
     }
