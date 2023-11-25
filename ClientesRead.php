@@ -7,9 +7,6 @@
         $query = "SELECT id_cliente, Nombre, Primer_apellido, Segundo_apellido, Correo, Numero_telefonico, Direccion, ruta_imagen FROM SweetSeasons.clientes";
         $result = mysqli_query($conexion, $query);
         echo "<br>";
-        echo '<form method ="post" action="ClientesModificarVista.php">';
-        echo '<button class="btn" type="submit" name="modificar">Modificar</button>';
-        echo '</form>';
         echo "<br>";
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<br>";

@@ -1,20 +1,29 @@
 <?php
 include "include/templates/header.php";
 ?>
-    <br>
-        <h3 class="h3">Categoría de Productos </h3>
-        <main>
-            <section class="container">
-                <?php
-                echo "<button class='btn' type='submit' name='Insertar'><a href='CategoriaInsert.html'>Agregar</a></button>";
-                echo '<form method ="post" action="CategoriaModificarVista.php">';      
-                echo '<button class="btn" type="submit" name="modificar">Modificar</button>';
-                echo '</form>';
-                include_once('CategoriasRead.php'); 
-                ?>
-            </section>
-        </main>
-        
+<br>
+<h3 class="h3" style="text-align: center;">Categoría de Productos </h3>
+<div style="text-align: center;">
+    <div class="btn-group" style="margin-left: 2.5rem;">
+        <form method="post" action="CategoriaInsert.html">
+            <button class='btn' type='submit' name='Insertar'>Agregar</button>
+        </form>
+    </div>
+
+    <div class="btn-group" style="margin-left: 2.5rem;">
+        <form method="post" action="CategoriaModificarVista.php">
+            <button class="btn" type="submit" name="modificar">Modificar</button>
+        </form>
+    </div>
+</div>
+<main>
+    <section class="container">
+        <?php
+        include_once('CategoriasRead.php');
+        ?>
+    </section>
+</main>
+
 
 <?php
 include "include/templates/footer.php";
