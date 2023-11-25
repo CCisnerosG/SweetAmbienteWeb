@@ -17,14 +17,14 @@ if(isset($_POST['agregar'])){
     $stmt->bind_param("sssssss", $nombre, $primer_apellido, $segundo_apellido, $correo, $numero_telefonico, $direccion, $imagen);
 
     if ($stmt->execute()) {
-        echo "Se han ingresado correctamente los datos";
+        echo "<script>alert('Registro agregado con éxito.');</script>";
     } else {
-        echo "Error al ingresar los datos: " . $stmt->error;
+        echo "<script>alert('Error al agregar el clientre: " . $stmt->error . "');</script>";
     }
 
     $stmt->close();
     $conexion->close();
 
-    header('Location: Clientes.php');
+    header("refresh:0.5;url=Clientes.php");
 }
 ?>

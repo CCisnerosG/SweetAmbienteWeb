@@ -14,11 +14,12 @@
         $stmt->bind_param("sss", $nombre, $descripcion, $imagen);
     
         if ($stmt->execute()) {
-            echo "Se han ingresado correctamente los datos de la categoria";
+            echo "<script>alert('Registro agregado con éxito.');</script>";
         } else {
-            echo "Error al ingresar los datos de la categoria: " . $stmt->error;
+            echo "<script>alert('Error al agregar la categoría: " . $stmt->error . "');</script>";
         }
     
         $stmt->close();
         $conexion->close();
+        header("refresh:0.5;url=Categorias.php");
     }

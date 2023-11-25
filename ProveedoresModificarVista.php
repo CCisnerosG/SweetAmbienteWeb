@@ -1,29 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Pagina Inicial" content="Sweet Seasons" />
-    <meta name="Keywords" content="pasteles, cupcakes, postres, galletas, casas de" />
-    <title>Sweet Seasons</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
-
-    <link rel="preload" href="style/styles.css">
-    <link rel="stylesheet" href="style/styles.css">
-</head>
-<body>
-    <header class="head">
-        <nav>
-            <div>
-                <ul class="MenuList">
-                    <li class="ItemMenu"><a class="MenuLink" href="Proveedores.php">Proveedores</a> </li>
-                </ul>
-                
-            </div>
-        </nav>
-    </header>
-    <br><br><br><br>
+<?php
+include 'include/templates/header.php';
+?>
+<br><br>
     <h3 class="h3">Modificar Proveedores</h3>
     <section>
         <form method="post" action="ProveedoresModificar.php" onsubmit="return validarFormularioProveedoresM()">
@@ -84,12 +62,7 @@
         </form>
     </section>
     <script src="ValidacionProveedores.js"></script>
-    <footer class="footer">
-        <nav>
-            <div>
-                <p class="FooterText">Sweet Seasons</p>
-            </div>
-        </nav>
-    </footer>
-</body>
-</html>
+
+<?php
+include "include/templates/footer.php";
+?>

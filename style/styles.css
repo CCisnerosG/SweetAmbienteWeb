@@ -199,6 +199,11 @@ img {
     font-family: 'Mountains of Christmas', serif;
 }
 
+.cont_btn{
+    display: flexbox;
+    justify-content: space-between;
+    margin-left: 2.5rem;
+}
 
 .btn:visited {
     text-decoration: none;
