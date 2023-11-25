@@ -35,20 +35,68 @@
     <h3 class="h3">Modificar Venta</h3>
     <section>
         <form method="post" action="VentasModificar.php" onsubmit="return validateFormVM()">
-            <label for="id_venta">Digite el id de venta: </label>
-            <input type="text" name="id_venta" placeholder="Ingrese el id de venta">
+            <label for="id_venta">Digite la venta que desea modificar: </label>
+            <select name="Venta">
+            <?php
+                include('DAL/conexion.php');
+                $conexion = Conecta();
+                
+                $query = "SELECT id_venta FROM SweetSeasons.ventas";
+                $result = mysqli_query($conexion, $query);
+
+                if ($result) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<option value=\"" . $row['id_venta'] . "\">" . $row['id_venta'] .  "</option>";
+                    }
+                } else {
+                    echo "<option value=\"\">Error al obtener compras</option>";
+                }
+
+            ?>
+            </select>
             <br>
             <br>
             <label for="Fecha_venta">Ingrese la fecha en la que se realizó la venta: </label>
             <input type="date" name="Fecha_venta">
             <br>
             <br>
-            <label for="id_cliente">Digite el id del cliente: </label>
-            <input type="text" name="id_cliente" placeholder="Digite el id del cliente">
-            <br>
-            <br>
-            <label for="id_producto">Digite el id del producto: </label>
-            <input type="text" name="id_producto" placeholder="Digite el id de producto">
+            <label for="Cliente">Seleccione el cliente que realizó la compra: </label>
+        <select name="Cliente">
+            <?php
+
+            $query = "SELECT id_cliente, Nombre FROM SweetSeasons.clientes";
+            $result = mysqli_query($conexion, $query);
+
+            if ($result) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<option value=\"" . $row['id_cliente'] . "\">" . $row['Nombre'] . "</option>";
+                }
+            } else {
+                echo "<option value=\"\">Error al obtener clientes</option>";
+            }
+            ?>
+        </select>
+        <br>
+        <br>
+            <label for="Producto">Seleccione el producto: </label>
+            <select name="Producto">
+            <?php
+                
+                $query = "SELECT id_producto, Nombre, Precio FROM SweetSeasons.Productos";
+                $result = mysqli_query($conexion, $query);
+
+                if ($result) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<option value=\"" . $row['id_producto'] . "\">" . $row['Nombre'] . "</option>";
+                    }
+                } else {
+                    echo "<option value=\"\">Error al obtener productos</option>";
+                }
+
+                mysqli_close($conexion);
+            ?>
+
+            </select>
             <br>
             <br>
             <label for="cantidad">Digite la cantidad: </label>

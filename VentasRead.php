@@ -36,7 +36,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo '<td>' . $row['Precio'] . '</td>';
     echo '<td>' . $row['Total'] . '</td>';
     echo '<td>';
-    echo '<form method ="post" action="VentasModificar.html">'; 
+    echo '<form method ="post" action="VentasModificarVista.php">'; 
     echo '<input type="hidden" name="id_venta" value="' . $row['id_venta'] . '">';          
     echo '<button class="btn" type="submit" name="modificar">Modificar</button>';
     echo '</form>';
