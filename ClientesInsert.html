@@ -66,41 +66,50 @@
             </div>
         </div>
     </nav>
-
-    <h3 class="h3">Agregar Clientes</h3>
-    <section>
-        <form method="post" action="ClientesInsert.php"onsubmit="return validarFormularioClientes()">
-            <label for="Nombre">Digite el nombre que se desea agregar: </label>
-            <input type="text" name="Nombre" placeholder="Digite el nombre">
-            <br>
-            <br>
-            <label for="Primer_apellido">Digite el primer apellido que se desea agregar: </label>
-            <input type="text" name="Primer_apellido" placeholder="Digite el primer apellido">
-            <br>
-            <br>
-            <label for="Segundo_apellido">Digite el segundo apellido que se desea agregar: </label>
-            <input type="text" name="Segundo_apellido" placeholder="Digite el segundo apellido">
-            <br>
-            <br>
-            <label for="Correo">Digite el correo que se desea agregar: </label>
-            <input type="text" name="Correo" placeholder="Digite el correo" onblur="validateCorreo()">
-            <br>
-            <br>
-            <label for="Numero_telefonico">Digite el número telefónico que se desea agregar: </label>
-            <input type="text" name="Numero_telefonico" placeholder="Digite el número telefónico" onblur="validateNumeroTelefono()">
-            <br>
-            <br>
-            <label for="Direccion">Digite la dirección que se desea agregar: </label>
-            <input type="text" name="Direccion" placeholder="Digite la dirección">
-            <br>
-            <br>
-            <label for="ruta_imagen">Suba la imagen que se desea agregar: </label>
-            <input class="input" type="file" name="Imagen" placeholder="">
-            <br>
-            <br>
-            <input class="btn" type="submit" name="agregar" value="Agregar">
-        </form>
-    </section>
+    <a class="arrow_module" href="Clientes.php"><i class="fa-solid fa-arrow-left" style="color: #4F260A; margin-top: 5rem; margin-left: 2rem;"></i></a>
+    <h3 class="h3_2" style="text-align: center;">Agregar Clientes</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <section>
+                    <form method="post" action="ClientesInsert.php" onsubmit="return validarFormularioClientes()" class="row g-3">
+                        <div class="mb-3">
+                            <label for="Nombre" class="form-label">Digite el nombre que se desea agregar:</label>
+                            <input type="text" name="Nombre" class="form-control" placeholder="Digite el nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Primer_apellido" class="form-label">Digite el primer apellido que se desea agregar:</label>
+                            <input type="text" name="Primer_apellido" class="form-control" placeholder="Digite el primer apellido">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Segundo_apellido" class="form-label">Digite el segundo apellido que se desea agregar:</label>
+                            <input type="text" name="Segundo_apellido" class="form-control" placeholder="Digite el segundo apellido">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Correo" class="form-label">Digite el correo que se desea agregar:</label>
+                            <input type="text" name="Correo" class="form-control" placeholder="Digite el correo" onblur="validateCorreo()">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Numero_telefonico" class="form-label">Digite el número telefónico que se desea agregar:</label>
+                            <input type="text" name="Numero_telefonico" class="form-control" placeholder="Digite el número telefónico" onblur="validateNumeroTelefono()">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Direccion" class="form-label">Digite la dirección que se desea agregar:</label>
+                            <input type="text" name="Direccion" class="form-control" placeholder="Digite la dirección">
+                        </div>
+                        <div class="mb-3">
+                            <label for="ruta_imagen" class="form-label">Suba la imagen que se desea agregar:</label>
+                            <input class="form-control" type="file" name="Imagen" placeholder="">
+                        </div>
+                        <div class="mb-3">
+                            <input class="btn" type="submit" name="agregar" value="Agregar">
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+    
     <script src="js/ValidacionClientes.js"></script>
 
 

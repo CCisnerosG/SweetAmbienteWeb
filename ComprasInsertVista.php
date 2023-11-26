@@ -1,8 +1,9 @@
 <?php
 include 'include/templates/header.php';
 ?>
-    <br><br>
-    <h3 class="h3" style="text-align: center;">Agregar Compra</h3>
+    <a class="arrow_module" href="Compras.php"><i class="fa-solid fa-arrow-left" style="color: #4F260A; margin-top: 5rem; margin-left: 2rem;"></i></a>
+
+    <h3 class="h3_2" style="text-align: center;">Agregar Compra</h3>
     <section class="container" style="width:40%">
         <form method="post" action="ComprasInsert.php" onsubmit="return validateFormI()" class="row g-3">
             <div class="col-12">

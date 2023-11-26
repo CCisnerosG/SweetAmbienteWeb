@@ -1,63 +1,72 @@
 <?php
 include 'include/templates/header.php';
 ?>
+ <a class="arrow_module" href="Productos.php"><i class="fa-solid fa-arrow-left" style="color: #4F260A; margin-top: 5rem; margin-left: 2rem;"></i></a>
+    <h3 class="h3_2" style="text-align: center;">Agregar Productos</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <section>
+                <form method="post" action="ProductosInsert.php" onsubmit="return validateFormI()" class="row g-3">
+                    <div class="mb-3">
+                        <label for="Nombre" class="form-label">Digite el nombre que se desea agregar:</label>
+                        <input type="text" name="Nombre" class="form-control" placeholder="Digite el nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="categoria" class="form-label">Seleccione la categoría que se desea elegir:</label>
+                        <select name="categoria" class="form-select">
+                            <?php
+                            include('DAL/conexion.php');
+                            $conexion = Conecta();
+                            
+                            $query = "SELECT id_categoria, Nombre FROM SweetSeasons.categoria";
+                            $result = mysqli_query($conexion, $query);
 
-    <h3 class="h3">Agregar Productos</h3>
-    <section>
-        <form method="post" action="ProductosInsert.php" onsubmit="return validateFormI()">
-            <label for="Nombre">Digite el nombre que se desea agregar: </label>
-            <input type="text" name="Nombre" placeholder="Digite el nombre">
-            <br>
-            <br>
-            <label for="categoria">Seleccione la categoria que se desea elegir: </label>
-            <select name="categoria">
-                <?php
-                    include('DAL/conexion.php');
-                    $conexion = Conecta();
-                    
-                    $query = "SELECT id_categoria, Nombre FROM SweetSeasons.categoria";
-                    $result = mysqli_query($conexion, $query);
-    
-                    if ($result) {
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            echo "<option value=\"" . $row['id_categoria'] . "\">" . $row['Nombre'] . "</option>";
-                        }
-                    } else {
-                        echo "<option value=\"\">Error al obtener las categorías</option>";
-                    }
-    
-                    mysqli_close($conexion);
-                ?>
-            </select>
-            <br>
-            <br>
-            <label for="Cantidad">Digite la Cantidad que se desea agregar: </label>
-            <input type="number" name="Cantidad" placeholder="Digite la cantidad" onblur="validateQuantityI()">
-            <br>
-            <br>
-            <label for="Descripcion">Digite la Descripcion que se desea agregar: </label>
-            <input type="text" name="Descripcion" placeholder="Digite la descripción ">
-            <br>
-            <br>
-            <label for="Tamano">Seleccione el Tamaño que se desea agregar:</label>
-                <select name="Tamano">
-                    <option value='S'>S</option>
-                    <option value='M'>M</option>
-                    <option value='L'>L</option>
-                </select>
-            <br>
-            <br>
-            <label for="Precio">Digite el Precio que se desea agregar: </label>
-            <input type="number" name="Precio" placeholder="Digite el precio" onblur="validatePriceI()">
-            <br>
-            <br>
-            <label for="ruta_imagen">Suba la imagen que se desea agregar: </label>
-            <input lass="input" type="file" name="Imagen" placeholder="">
-            <br>
-            <br>
-            <input class="btn" type="submit" name="agregar" value="Agregar">
-        </form>
-    </section>
+                            if ($result) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo "<option value=\"" . $row['id_categoria'] . "\">" . $row['Nombre'] . "</option>";
+                                }
+                            } else {
+                                echo "<option value=\"\">Error al obtener las categorías</option>";
+                            }
+
+                            mysqli_close($conexion);
+                            ?>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Cantidad" class="form-label">Digite la cantidad que se desea agregar:</label>
+                        <input type="number" name="Cantidad" class="form-control" placeholder="Digite la cantidad" onblur="validateQuantityI()">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Descripcion" class="form-label">Digite la descripción que se desea agregar:</label>
+                        <input type="text" name="Descripcion" class="form-control" placeholder="Digite la descripción">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Tamano" class="form-label">Seleccione el tamaño que se desea agregar:</label>
+                        <select name="Tamano" class="form-select">
+                            <option value='S'>S</option>
+                            <option value='M'>M</option>
+                            <option value='L'>L</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Precio" class="form-label">Digite el precio que se desea agregar:</label>
+                        <input type="number" name="Precio" class="form-control" placeholder="Digite el precio" onblur="validatePriceI()">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ruta_imagen" class="form-label">Suba la imagen que se desea agregar:</label>
+                        <input class="form-control" type="file" name="Imagen" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <input class="btn" type="submit" name="agregar" value="Agregar">
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
+
     
     <script src="js/ValidacionProductos.js"></script>
 

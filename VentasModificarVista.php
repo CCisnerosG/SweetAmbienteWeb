@@ -1,11 +1,9 @@
 <?php
 include "include/templates/header.php";
 ?>
+ <a class="arrow_module" href="Ventas.php"><i class="fa-solid fa-arrow-left" style="color: #4F260A; margin-top: 5rem; margin-left: 2rem;"></i></a>
 
-<body>
-
-    <br><br><br><br>
-    <h3 class="h3" style="text-align:center;">Modificar Venta</h3>
+    <h3 class="h3_2" style="text-align:center;">Modificar Venta</h3>
     <section class="container" style="width:40%;">
         <form method="post" action="VentasModificar.php" onsubmit="return validateFormVM()" class="row g-3">
             <div class="col-12">

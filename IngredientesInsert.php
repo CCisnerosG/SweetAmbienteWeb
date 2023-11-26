@@ -5,7 +5,12 @@
         $unidad = $_POST['Unidad_medida'];
         $precio = $_POST['Precio'];
         $id_proveedor = $_POST['proveedor'];
-        $imagen = 'image/ingredientes/' .  $_POST['Imagen'];
+
+        $nombre_temporal = $_FILES['Imagen']['tmp_name'];
+        $nombre_img = $_FILES['Imagen']['name'];
+        move_uploaded_file($nombre_temporal, 'image/ingredientes/' . $nombre_img);
+
+        $imagen = 'image/ingredientes/' . $nombre_img;
     
         include('DAL/conexion.php');
         $conexion = Conecta();

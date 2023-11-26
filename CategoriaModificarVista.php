@@ -1,9 +1,9 @@
 <?php
 include 'include/templates/header.php';
 ?>
-<br><br>
+<a class="arrow_module" href="Categorias.php"><i class="fa-solid fa-arrow-left" style="color: #4F260A; margin-top: 5rem; margin-left: 2rem;"></i></a>
 <div class="container">
-    <h3 class="h3">Modificar Categoría</h3>
+    <h3 class="h3_2">Modificar Categoría</h3>
     <div class="row">
         <div class="col-md-6">
             <section>
@@ -46,9 +46,9 @@ include 'include/templates/header.php';
                         <input class="btn btn-primary" type="submit" name="modificarCategoria" value="Modificar">
                     </div>
                 </form>
+            </section>
         </div>
     </div>
-    </section>
 </div>
 
 <script src="js/ValidacionCategoriaProducto.js"></script>

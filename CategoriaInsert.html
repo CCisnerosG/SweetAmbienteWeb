@@ -67,26 +67,34 @@
         </div>
     </nav>
 
-    <h3 class="h3" style="text-align: center;">Agregar Categoría</h3>
-    <section class="container">
-        <form method="post" action="CategoriaInsert.php" onsubmit="return validateFormCPI()" class="row g-3">
-            <div class="col-12">
-                <label for="Nombre" class="form-label">Digite el nombre que se desea agregar:</label>
-                <input type="text" name="Nombre" class="form-control" placeholder="Digite el nombre">
+    <a class="arrow_module" href="Categorias.php"><i class="fa-solid fa-arrow-left" style="color: #4F260A; margin-top: 5rem; margin-left: 2rem;"></i></a>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <section>
+                    <h3 class="h3_2" style="text-align: center;">Agregar Categoría</h3>
+                    <form method="post" action="CategoriaInsert.php" onsubmit="return validateFormCPI()" class="row g-3">
+                        <div class="mb-3">
+                            <label for="Nombre" class="form-label">Digite el nombre que se desea agregar:</label>
+                            <input type="text" name="Nombre" class="form-control" placeholder="Digite el nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Descripcion" class="form-label">Digite la descripción que se desea agregar:</label>
+                            <input type="text" name="Descripcion" class="form-control" placeholder="Digite la descripción de la categoria">
+                        </div>
+                        <div class="mb-3">
+                            <label for="ruta_imagen" class="form-label">Suba la imagen que se desea agregar:</label>
+                            <input class="form-control" type="file" name="Imagen" placeholder="">
+                        </div>
+                        <div class="mb-3">
+                            <input class="btn" type="submit" name="agregarCategoria" value="Agregar">
+                        </div>
+                    </form>
+                </section>
             </div>
-            <div class="col-12">
-                <label for="Descripcion" class="form-label">Digite la descripción que se desea agregar:</label>
-                <input type="text" name="Descripcion" class="form-control" placeholder="Digite la descripción de la categoria">
-            </div>
-            <div class="col-12">
-                <label for="ruta_imagen" class="form-label">Suba la imagen que se desea agregar:</label>
-                <input class="form-control" type="file" name="Imagen" placeholder="">
-            </div>
-            <div class="col-12">
-                <input class="btn btn-primary" type="submit" name="agregarCategoria" value="Agregar">
-            </div>
-        </form>
-    </section>
+        </div>
+    </div>
 
     <script src="js/ValidacionCategoriaProducto.js"></script>
 

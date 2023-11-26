@@ -3,8 +3,8 @@ include 'include/templates/header.php';
 ?>
 <body>
 
-    <br><br><br><br>
-    <h3 class="h3" style="text-align:center;">Modificar Compra</h3>
+<a class="arrow_module" href="Compras.php"><i class="fa-solid fa-arrow-left" style="color: #4F260A; margin-top: 5rem; margin-left: 2rem;"></i></a>
+    <h3 class="h3_2" style="text-align:center;">Modificar Compra</h3>
     <section class="container" style="width: 40%;">
         <form method="post" action="ComprasModificar.php" onsubmit="return validateFormM()" class="row g-3">
             <div class="col-12">
