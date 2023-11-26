@@ -19,48 +19,6 @@
 </head>
 
 <body>
-    <!-- <header class="head">
-    <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <a class="MenuText" href="index.html">Inicio</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="display: flex; justify-content: space-between;">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" style="font-size: 1rem; font-weight: 500; font-family:'Inter', sans-serif; color: #4F260A;" href="Productos.php">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="font-size: 1rem; font-weight: 500; font-family:'Inter', sans-serif; color: #4F260A;" href="Categorias.php">Categoría de productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="font-size: 1rem; font-weight: 500; font-family:'Inter', sans-serif; color: #4F260A;" href="Ventas.php">Ventas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="font-size: 1rem; font-weight: 500; font-family:'Inter', sans-serif; color: #4F260A;" href="Compras.php">Compras</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="font-size: 1rem; font-weight: 500; font-family:'Inter', sans-serif; color: #4F260A;" href="Ingredientes.php">Ingredientes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="font-size: 1rem; font-weight: 500; font-family:'Inter', sans-serif; color: #4F260A;" href="Proveedores.php">Proveedores</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="font-size: 1rem; font-weight: 500; font-family:'Inter', sans-serif; color: #4F260A;" href="Clientes.php">Clientes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="sesionLink" class="nav-link" href="InicioSesion.html">Iniciar Sesión</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header> -->
 
     <nav class="navbar navbar-expand-lg fixed-top navbar-scroll shadow-0" style="background-color: #F5C8DA;">
         <div class="container">

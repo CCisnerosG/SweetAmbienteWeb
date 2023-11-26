@@ -16,13 +16,18 @@ include "include/templates/header.php";
         </form>
     </div>
 </div>
-    <main>
-        <section class="container">
+
+<main role="main">
+    <div class="album py-5" >
+      <div class="container">
+        <div class="row">
             <?php         
             include_once('ClientesRead.php'); 
             ?>
-        </section>
-    </main>
+        </div>
+    </div>
+  </div>
+</main>
 
 <?php
 include "include/templates/footer.php";

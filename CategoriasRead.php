@@ -9,14 +9,16 @@
     $result = mysqli_query($conexion, $query);
 
     while ($row = mysqli_fetch_assoc($result)) {
-        echo"<br>";
-        echo "<img class='img' src=" . $row['ruta_imagen'] . ">";
-        echo "<p class='text'><strong>Nombre:</strong> " . $row['Nombre'] . "</p>";
-        echo "<p class='text'><strong>Descripción:</strong> " . $row['Descripcion'] . "</p>";
+        echo "<div class='card rounded-pill text-center overflow-hidden border-0 shadow' style='width: 18rem;'>";
+        echo "  <img src='" . $row['ruta_imagen'] . "' class='card-img-top img_round' alt=''>";
+        echo "  <div class='card-body bg-light' style='color: #4F260A'> ";
+        echo "      <p class='title_ingredientes'>" . $row['Nombre'] . "</p>";
+        echo "      <p class='text_ingredientes'>" . $row['Descripcion'] . "</p>";
+        echo "      <form method='post' action='CategoriaDelete.php'>";
+        echo "        <input type='hidden' name='id_categoria' value='" . $row['id_categoria'] . "'>";
+        echo "        <button class='btn btn-dark px-3 rounded-pill' type='submit' name='eliminarCategoria'>Eliminar</button>";
+        echo "      </form>";
+        echo "  </div>";
+        echo "</div>";
 
-        echo '<form method ="post" action="CategoriaDelete.php">';      
-        echo '<input type="hidden" name="id_categoria" value="' . $row['id_categoria'] . '">';
-        echo '<button class="btn" type="submit" name="eliminarCategoria">Eliminar</button>';
-        echo '</form>';
     }   
-

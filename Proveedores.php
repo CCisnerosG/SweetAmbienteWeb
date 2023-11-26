@@ -17,13 +17,18 @@ include "include/templates/header.php";
     </div>
 </div>
 
-<main>
-    <section class="container">
-        <?php
-        include_once('ProveedoresRead.php');
-        ?>
-    </section>
+<main role="main">
+    <div class="album py-5" >
+      <div class="container">
+        <div class="row">
+            <?php
+            include_once('ProveedoresRead.php');
+            ?>
+        </div>
+    </div>
+  </div>
 </main>
+
 <?php
 include "include/templates/footer.php";
 ?>

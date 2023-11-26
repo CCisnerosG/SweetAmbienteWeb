@@ -80,6 +80,9 @@ a:hover {
     font-weight: 500;
     font-family: 'Inter', sans-serif;
 }
+.btn_login:hover {
+    opacity: 0.8;
+  }
 
 .text_login {
     font-size: 1rem;
@@ -140,6 +143,17 @@ img {
     object-position: center;
     width:100%;
 }
+.img_categoria {
+    object-fit: cover;
+    object-position: center;
+    width:100%;
+    height:300px;
+    margin: 0.5rem;
+}
+.img_round {
+    width:100%;
+    height:300px;
+}
 
 .img_ingredientes {
     object-fit: cover;
@@ -164,6 +178,10 @@ img {
     font-weight: 700;
     font-family: 'Mountains of Christmas', serif;
 }
+
+.btn:hover {
+    opacity: 0.8;
+  }
 .title_ingredientes{
     font-size: 1.6rem;
     font-weight: 700;
@@ -198,6 +216,11 @@ img {
     font-weight: 700;
     font-family: 'Mountains of Christmas', serif;
 }
+
+.btn_Ingredientes:hover {
+    opacity: 0.8;
+  }
+
 
 .cont_btn{
     display: flexbox;
