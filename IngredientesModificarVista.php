@@ -7,7 +7,7 @@ include 'include/templates/header.php';
     <div class="row">
         <div class="col-md-6">
             <section>
-                <form method="post" action="ingredientesModificar.php" onsubmit="return validateAllFieldsIngrediente()" class="row g-3">
+                <form method="post" action="ingredientesModificar.php" enctype="multipart/form-data" onsubmit="return validateAllFieldsIngrediente()" class="row g-3">
                     <div class="mb-3">
                         <label for="ingrediente" class="form-label">Seleccione el ingrediente que se desea modificar: </label>
                         <select name="ingrediente" class="form-select">

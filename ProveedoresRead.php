@@ -22,10 +22,12 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo "        <p class='card-text text_ingredientes'><strong>Estado:</strong> " . $row['Estado'] . "</p>";
     echo "      </div>";
     echo "      <div class='btn-group' style='margin: 0 auto;'>";
+    if (isset($_SESSION['usuario'])) {
     echo "        <form method='post' action='ProveedoresDelete.php'>";
     echo "          <input type='hidden' name='id_proveedor' value='" . $row['id_proveedor'] . "'>";
     echo "          <button class='btn' style='margin: 1rem; type='submit' name='eliminar'>Eliminar</button>";
     echo "        </form>";
+    }
     echo "      </div>";
     echo "    </div>";
     echo "  </div>";

@@ -51,7 +51,13 @@ a:hover {
 }
 
 /*Fin Header styles*/
-
+/*Carousel styles*/
+.contenedor{
+    margin-top: 3.688rem;
+    width: 100%;
+    overflow: hidden;
+}
+/*fin carousel*/
 /*Login styles*/
 .loginTitle{
     font-size: 2rem;
@@ -114,7 +120,7 @@ a:hover {
 }
 
 .arrow_module{
-    padding-top: 4rem;
+    padding-top: 4remte
 }
 /*Body Styles*/
 .h3 {
@@ -174,6 +180,38 @@ img {
     height:500px;
 }
 
+.img_ind {
+    object-fit: cover;
+    object-position: center;
+    width:100%;
+    height:18.75rem;
+}
+
+.img_ind2 {
+    object-fit: cover;
+    object-position: center;
+    width:100%;
+    height: 18.75rem;
+    padding: 1rem;
+}
+
+.img_ind3 {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    object-fit: cover;
+    object-position: center;
+    width:100%;
+    height: 15.5rem;
+}
+.txt_pro_ind{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    color: #4F260A;   
+}
 .btn {
     padding: 1rem 2rem;
     border-radius: 0.4rem;

@@ -7,7 +7,7 @@ include 'include/templates/header.php';
     <div class="row">
         <div class="col-md-6">
             <section>
-                <form method="post" action="ProductosModificar.php" onsubmit="return validateFormM()" class="row g-3">
+                <form method="post" action="ProductosModificar.php" enctype="multipart/form-data"  onsubmit="return validateFormM()" class="row g-3">
                     <div class="mb-3">
                         <label for="producto" class="form-label">Seleccione el producto que se desea modificar:</label>
                         <select name="producto" class="form-select">

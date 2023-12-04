@@ -5,12 +5,21 @@ if (isset($_POST['ingredientesModificar'])) {
     $unidad = $_POST['Unidad_medida'];
     $precio = $_POST['Precio'];
     $id_proveedor = $_POST['proveedor'];
-    $imagen = $_POST['Imagen'];
+
+    if(isset($_FILES['Imagen']) && $_FILES['Imagen']['error'] == 0){
+        $imagen = $_FILES['Imagen']['name'];
+        $ruta_imagen = 'image/ingredientes/' . $imagen;
+
+        move_uploaded_file($_FILES['Imagen']['tmp_name'], $ruta_imagen);
+    } else {
+        $imagen = '';
+        $ruta_imagen = '';
+    }
     
     include('DAL/conexion.php');
     $conexion = Conecta();
 
-    $sql = "UPDATE SweetSeasons.ingredientes SET Nombre = '$nombre',  Unidad_medida = '$unidad',id_proveedor = '$id_proveedor', Precio = '$precio', ruta_imagen = 'image/ingredientes/$imagen' WHERE id_ingrediente = '$id_ingrediente'";
+    $sql = "UPDATE SweetSeasons.ingredientes SET Nombre = '$nombre',  Unidad_medida = '$unidad',id_proveedor = '$id_proveedor', Precio = '$precio', ruta_imagen = '$ruta_imagen' WHERE id_ingrediente = '$id_ingrediente'";
 
     $result_update = mysqli_query($conexion, $sql); 
 

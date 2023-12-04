@@ -7,7 +7,7 @@ include 'include/templates/header.php';
     <div class="row">
         <div class="col-md-6">
             <section>
-                <form method="post" action="ProductosInsert.php" onsubmit="return validateFormI()" class="row g-3">
+                <form method="post" action="ProductosInsert.php" enctype="multipart/form-data"  onsubmit="return validateFormI()" class="row g-3">
                     <div class="mb-3">
                         <label for="Nombre" class="form-label">Digite el nombre que se desea agregar:</label>
                         <input type="text" name="Nombre" class="form-control" placeholder="Digite el nombre">

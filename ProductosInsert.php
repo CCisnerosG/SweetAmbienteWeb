@@ -6,7 +6,12 @@ if(isset($_POST['agregar'])){
     $descripcion = $_POST['Descripcion'];
     $tamano = $_POST['Tamano'];
     $precio = $_POST['Precio'];
-    $imagen = 'image/productos/' . $_POST['Imagen'];
+
+    $nombre_temporal = $_FILES['Imagen']['tmp_name'];
+    $nombre_img = $_FILES['Imagen']['name'];
+    move_uploaded_file($nombre_temporal, 'image/productos/' . $nombre_img);
+
+    $imagen = 'image/productos/' . $nombre_img;
 
     include('DAL/conexion.php');
     $conexion = Conecta();

@@ -1,5 +1,4 @@
 <?php
-
 include('DAL/conexion.php');
 $conexion = Conecta();
 
@@ -16,6 +15,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo '                <p class="card-text text_ingredientes"><strong>Cantidad:</strong> ' . $row['Cantidad'] . '</p>';
     echo '                <p class="card-text text_ingredientes"><strong>Tamaño:</strong> ' . $row['Tamano'] . '</p>';
     echo '                <p class="card-text text_ingredientes"><strong>Precio:</strong> ' . $row['Precio'] . '</p>';
+    if (isset($_SESSION['usuario'])) {
     echo '                <div class="d-flex justify-content-between align-items-center">';
     echo '                  <div class="btn-group" style="margin: 0 auto;">';
     echo '                    <form method ="post" action="ProductosDelete.php">';      
@@ -24,6 +24,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo '                    </form>';
     echo '                  </div>';
     echo '                </div>';
+    }
     echo '              </div>';
     echo '            </div>';
     echo '          </div>';

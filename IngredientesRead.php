@@ -18,10 +18,12 @@
         echo '                <p class="card-text text_ingredientes"><strong>Precio:</strong> ' . $row['Precio'] . '</p>';
         echo '                <div class="d-flex justify-content-between align-items-center">';
         echo '                  <div class="btn-group" style="margin: 0 auto;">';
+        if (isset($_SESSION['usuario'])) {
         echo '                    <form method="post" action="IngredientesDelete.php">';
         echo '                      <input type="hidden" name="id_ingrediente" value="' . $row['id_ingrediente'] . '">';
         echo '                      <button class="btn_Ingredientes" type="submit" name="eliminarIngredientes">Eliminar</button>';
         echo '                    </form>';
+        }
         echo '                  </div>';
         echo '                </div>';
         echo '              </div>';

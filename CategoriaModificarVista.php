@@ -7,7 +7,7 @@ include 'include/templates/header.php';
     <div class="row">
         <div class="col-md-6">
             <section>
-                <form method="post" action="CategoriaModificar.php" onsubmit="return validateFormCPM()">
+                <form method="post" action="CategoriaModificar.php"enctype="multipart/form-data"  onsubmit="return validateFormCPM()">
                     <div class="mb-3">
                         <label for="categoria" class="form-label">Seleccione la categoría que se desea modificar:</label>
                         <select name="categoria" class="form-select">

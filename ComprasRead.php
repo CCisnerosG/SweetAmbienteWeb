@@ -36,6 +36,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo '<td>' . $row['precio'] . '</td>';
     echo '<td>' . $row['total'] . '</td>';
     echo '<td>';
+    if (isset($_SESSION['usuario'])) {
     echo '<form method ="post" action="ComprasModificarVista.php">'; 
     echo '<input type="hidden" name="id_compra" value="' . $row['id_compra'] . '">';          
     echo '<button class="btn" type="submit" name="modificar">Modificar</button>';
@@ -46,6 +47,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo '<input type="hidden" name="id_compra" value="' . $row['id_compra'] . '">';
     echo '<button class="btn" type="submit" name="eliminarCompras">Eliminar</button>';
     echo '</form>';
+    }
     echo '</td>';
     echo '</tr>';
 }   

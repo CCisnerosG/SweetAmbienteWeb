@@ -22,10 +22,12 @@
             echo "        <p class='card-text text_ingredientes'><strong>Dirección:</strong> " . $row['Direccion'] . "</p>";
             echo "      </div>";
             echo "      <div class='btn-group' style='margin: 0 auto;'>";
+            if (isset($_SESSION['usuario'])) {
             echo "        <form method='post' action='ClientesDelete.php'>";
             echo "          <input type='hidden' name='id_cliente' value='" . $row['id_cliente'] . "'>";
             echo "          <button class='btn' style='margin: 1rem;' type='submit' name='eliminar'>Eliminar</button>";
             echo "        </form>";
+            }
             echo "      </div>";
             echo "    </div>";
             echo "  </div>";

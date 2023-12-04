@@ -24,8 +24,7 @@
     <link rel="preload" href="style/normalize.css">
     <link rel="stylesheet" href="style/normalize.css">
 </head>
-
-    <header class="head">
+<body>
         <nav class="navbar navbar-expand-lg fixed-top navbar-scroll shadow-0" style="background-color: #F5C8DA;">
             <div class="container">
                 <a class="navbar-brand MenuText" href="index.html">Inicio</a>
@@ -80,14 +79,114 @@
                 </div>
             </div>
         </nav>
-    </header>
-</head>
 
-<body>
-    <br>
-    <br>
-    <br>
-    <p class="MenuText" style="text-align: center;">Sweet Seasons página de inicio</p>
+    <div class="contenedor">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="image/carousel/ca1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="image/carousel/ca2.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="image/carousel/ca3.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+
+    <main role="main">
+        <div class="album py-5 ">
+            <div class="container">
+                <h3 class="h3" style="text-align: center;"><a href="Productos.php">Productos</a></h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 " style="background-color: #F5C8DA;">
+                            <p class="card-text img_ind txt_pro_ind">Área de productos que brinda de la pastelería</p> 
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 ">
+                            <img class="card-text img_ind" src="image/productos/pastel_chocolate.jfif">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img class="card-text img_ind" src="image/productos/pastel_fresas.jfif">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 ">
+                            <img class="card-text img_ind" src="image/productos/cupcake_vainilla.jfif">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 ">
+                            <img class="card-text img_ind" src="image/productos/tiramisu.jfif">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 ">
+                            <img class="card-text img_ind" src="image/productos/mouse.jfif">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main role="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class=" mb-4"  style="background-color: #CBE6F9; padding-top: 3rem; padding-bottom: 5rem;">
+                        <h3 class="h3" style="text-align: center;"><a href="Ingredientes.php">Ingredientes</a></h3>
+                        <img class="img_ind2" src="image/ingredientes/vainilla.jfif">
+                        <p class="txt_pro_ind">Ingredientes que se utilizan en la pastelería</p> 
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="pb-3"  style="background-color: #CBE6F9;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img class="img_ind3" src="image/proveedores/Dos_Pinos.png">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="h3" style="text-align: center; "><a href="Proveedores.php">Proveedores</a></h3>
+                                    <p class="txt_pro_ind">Proveedores que brindan ingredientes a la pastelería</p> 
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                   <br>
+                   <div class="pb-3"  style="background-color: #CBE6F9;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img class="img_ind3" src="image/clientes/persona.jpg">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="h3" style="text-align: center;"><a href="Clientes.php">Clientes</a></h3>
+                                <p class="txt_pro_ind">Cartera de clientes que han comprado en la pastelería</p> 
+                            </div>
+                        </div>
+                    </div>
+                
+                   
+                </div>
+            </div>
+        </div>
+    </main>
 
     <footer class="footer">
         <nav>
