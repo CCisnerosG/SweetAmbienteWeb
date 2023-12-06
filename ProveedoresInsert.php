@@ -8,22 +8,13 @@ if(isset($_POST['agregar'])){
     $id_ingrediente = $_POST['id_ingrediente'];
     $estado = $_POST['Estado'];
 
-    //x---------------------COD PARA SUBIR CUALQUIER IMAGEN DESDE LOS ARCHIVOS DE COMPU-----------------------------------------
-    //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    // Verifica si se ha subido un archivo
-    if(isset($_FILES['Imagen']) && $_FILES['Imagen']['error'] == 0){
-        $imagen = $_FILES['Imagen']['name'];
-        $ruta_imagen = 'image/proveedores/' . $imagen;
+    $nombre_temporal = $_FILES['Imagen']['tmp_name'];
+        $nombre_img = $_FILES['Imagen']['name'];
+        move_uploaded_file($nombre_temporal, 'image/proveedores/' . $nombre_img);
 
-        // Mueve el archivo a la ruta deseada
-        move_uploaded_file($_FILES['Imagen']['tmp_name'], $ruta_imagen);
-    } else {
-        // Manejar el caso en que no se haya subido una imagen
-        $imagen = '';
-        $ruta_imagen = '';
-    }
+        $ruta_imagen = 'image/proveedores/' . $nombre_img;
+    
 
-    //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     include('DAL/conexion.php');
     $conexion = Conecta();
 
