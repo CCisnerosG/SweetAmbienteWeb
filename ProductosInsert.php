@@ -20,7 +20,7 @@ if(isset($_POST['agregar'])){
 
 
     $stmt = $conexion->prepare($sql);
-    $stmt->bind_param("sissssd", $nombre, $id_categoria, $cantidad, $descripcion, $tamano, $precio, $imagen);
+    $stmt->bind_param("sssssss", $nombre, $id_categoria, $cantidad, $descripcion, $tamano, $precio, $imagen);
 
     if ($stmt->execute()) {
         echo "<script>alert('Registro agregado con éxito.');</script>";

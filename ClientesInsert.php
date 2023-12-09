@@ -6,7 +6,12 @@ if(isset($_POST['agregar'])){
     $correo = $_POST['Correo'];
     $numero_telefonico = $_POST['Numero_telefonico'];
     $direccion = $_POST['Direccion'];
-    $imagen = $_POST['Imagen'];
+
+    $nombre_temporal = $_FILES['Imagen']['tmp_name'];
+    $nombre_img = $_FILES['Imagen']['name'];
+    move_uploaded_file($nombre_temporal, 'image/clientes/' . $nombre_img);
+
+    $imagen = 'image/clientes/' . $nombre_img;
 
     include('DAL/conexion.php');
     $conexion = Conecta();
@@ -19,7 +24,7 @@ if(isset($_POST['agregar'])){
     if ($stmt->execute()) {
         echo "<script>alert('Registro agregado con éxito.');</script>";
     } else {
-        echo "<script>alert('Error al agregar el clientre: " . $stmt->error . "');</script>";
+        echo "<script>alert('Error al agregar el cliente: " . $stmt->error . "');</script>";
     }
 
     $stmt->close();

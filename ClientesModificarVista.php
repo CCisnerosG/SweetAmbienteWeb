@@ -9,7 +9,7 @@ include "include/templates/header.php";
     <div class="row">
         <div class="col-md-6">
             <section>
-                <form method="post" action="ClientesModificar.php" onsubmit="return validarFormularioModificarClientes()">
+                <form method="post" action="ClientesModificar.php" enctype="multipart/form-data" onsubmit="return validarFormularioModificarClientes()">
                     <div class="mb-3">
                         <label for="cliente" class="form-label">Seleccione el cliente que se desea modificar: </label>
                         <select name="cliente" class="form-select">

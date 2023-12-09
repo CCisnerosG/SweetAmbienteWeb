@@ -8,7 +8,7 @@ include 'include/templates/header.php';
     <div class="row">
         <div class="col-md-6">
             <section>
-                <form method="post" action="ProveedoresModificar.php" onsubmit="return validarFormularioProveedoresM()" class="row g-3">
+                <form method="post" action="ProveedoresModificar.php" enctype="multipart/form-data" onsubmit="return validarFormularioProveedoresM()" class="row g-3">
                     <div class="mb-3">
                         <label for="proveedor" class="form-label">Seleccione el proveedor que se desea modificar: </label>
                         <select name="proveedor" class="form-select">
