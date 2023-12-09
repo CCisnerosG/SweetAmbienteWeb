@@ -48,7 +48,35 @@ $fotoUsuario = isset($_SESSION['foto_usuario']) ? $_SESSION['https://www.lollipo
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <!-- Agrega aquí tus elementos del menú según la estructura proporcionada -->
+                        <li class="nav-item ">
+                            <a class="nav-link " aria-current="page"
+                                style="font-family: 'Inter', sans-serif; color: #4F260A;"
+                                href="Productos.php">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-family: 'Inter', sans-serif; color: #4F260A;"
+                                href="Categorias.php">Categoría de productos</a>
+                        </li>
+                        <a class="nav-link" style="font-family: 'Inter', sans-serif; color: #4F260A;"
+                            href="Ventas.php">Ventas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-family: 'Inter', sans-serif; color: #4F260A;"
+                                href="Compras.php">Compras</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" style="font-family: 'Inter', sans-serif; color: #4F260A;"
+                                href="Ingredientes.php">Ingredientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-family: 'Inter', sans-serif; color: #4F260A;"
+                                href="Proveedores.php">Proveedores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-family: 'Inter', sans-serif; color: #4F260A;"
+                                href="Clientes.php">Clientes</a>
+                        </li>
+
                     </ul>
                     <ul class="navbar-nav flex-row">
                         <li class="nav-item">
@@ -62,19 +90,28 @@ $fotoUsuario = isset($_SESSION['foto_usuario']) ? $_SESSION['https://www.lollipo
         </nav>
     </header>
 
+
     <section class="vh-100">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                    <div class="card text-black" style="border: 0; border-radius: 1rem; background-color: #FBD7E6;">
-                        <!-- ... (tu código HTML para el formulario de inicio de sesión) ... -->
+                <div class="col-4 ">
+                    <div class="imagen-redonda shadow-sm">
+                        <img src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71ikMYA+TAS._AC_SX679_.jpg" alt="Foto perfil">
+                    </div>
+                </div>
+                <div class="col-6 ">
+                <h2 class="loginTitle" style="margin-bottom: 2rem;">Bienvenida, </h2>
+                    <div class="card" style="border: 0; border-radius: 1rem; background-color: #FBD7E6;">
+                        
                         <form class="card-body p-5 text-center" action="verificar.php" method="post" onsubmit="return validateFormU() && validateForm()">
                             <div class="mb-md-5 mt-md-4">
-                                <h2 class="loginTitle" style="margin: 1rem;">Perfil de Usuario</h2>
-                                <img src="<?php echo $fotoUsuario; ?>" alt="Foto de perfil" style="border-radius: 50%; max-width: 100px; margin: 1rem;">
-                                <p>Nombre: <?php echo $nombreUsuario; ?></p>
-                                <p>Correo: <?php echo $correoUsuario; ?></p>
-                                <!-- ... (código HTML para el resto del formulario) ... -->
+                                <h3 class="loginTitle" style="margin-bottom: 1rem;">Datos del usuario</h3>
+                                <p class="text_label" >Nombre: Katherine Cisneros </p>
+                                <hr>
+                                <p class="text_label">Correo: usuario1@gmail.com </p>
+                                <hr>
+                                <p class="text_label">Telefono: 8912 3456 </p>
+                                <hr>
                             </div>
                         </form>
                     </div>

@@ -7,8 +7,7 @@ $query = "SELECT id_proveedor, Nombre, Primer_apellido, Segundo_apellido, Numero
 $result = mysqli_query($conexion, $query);
 
 while ($row = mysqli_fetch_assoc($result)) {
-
-    echo "<div class='card mb-3 shadow-sm' style='max-width: 45%; margin-left: 1rem;'>";
+    echo "<div class='card mb-3 shadow-sm' style='max-width: 70%; border:none; margin-left: 1rem; background-color: #CBE6F9;'>";
     echo "  <div class='row no-gutters'>";
     echo "    <div class='col-md-4'>";
     echo "       <img class='img_categoria' src=" . $row['ruta_imagen'] . ">";

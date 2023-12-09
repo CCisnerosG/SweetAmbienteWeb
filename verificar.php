@@ -2,8 +2,7 @@
 session_start();
 
 $usuarios = [
-    'usuario1@gmail.com' => 'clave1',  // Usuario y contraseña de ejemplo
-    // Agrega más usuarios según sea necesario
+    'usuario1@gmail.com' => 'clave1', 
 ];
 
 $usuario = $_POST['usuario'];

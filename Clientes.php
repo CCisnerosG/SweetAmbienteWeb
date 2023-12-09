@@ -1,6 +1,6 @@
 <?php
 include "include/templates/header.php";
-session_start();
+
 ?>
     <br>
     <h3 class="h3" style="text-align: center;">Clientes</h3>
@@ -24,16 +24,17 @@ echo '</div>';
 ?>
 
 <main role="main">
-    <div class="album py-5" >
+    <div class="album py-5"">
       <div class="container">
-        <div class="row">
-            <?php         
+        <div class="row" >
+          <?php         
             include_once('ClientesRead.php'); 
             ?>
         </div>
     </div>
   </div>
 </main>
+
 
 <?php
 include "include/templates/footer.php";

@@ -1,6 +1,6 @@
 <?php
 include "include/templates/header.php";
-session_start();
+
 ?>
 <br>
 <h3 class="h3" style="text-align: center;">Proveedores </h3>
@@ -24,9 +24,9 @@ echo '</div>';
 ?>
 
 <main role="main">
-    <div class="album py-5" >
+    <div class="album py-5"">
       <div class="container">
-        <div class="row">
+        <div class="row" style="display: flex; align-items: center; justify-content: center;">
             <?php
             include_once('ProveedoresRead.php');
             ?>

@@ -1,7 +1,6 @@
 <?php
 include 'include/templates/header.php';
 
-session_start();
 ?>
 <br><br>
 <h3 class="h3" style="text-align: center;">Productos </h3>

@@ -1,6 +1,6 @@
 <?php
 include "include/templates/header.php";
-session_start();
+
 ?>
     <br>
         <h3 class="h3" style="text-align: center";>Historial de compras </h3>

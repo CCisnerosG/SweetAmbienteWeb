@@ -288,6 +288,18 @@ a:visited {
     color: #4F260A;
 }
 
+.imagen-redonda {
+    width: 95%; 
+    border-radius: 50%; 
+    overflow: hidden; 
+}
+
+.imagen-redonda img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
 /*Fin Footer styles*/
 .footer {
     width: 100%;
